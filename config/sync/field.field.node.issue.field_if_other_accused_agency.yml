@@ -1,0 +1,19 @@
+uuid: d3defe15-661d-42c7-83a5-8faccf4e6a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_if_other_accused_agency
+    - node.type.issue
+id: node.issue.field_if_other_accused_agency
+field_name: field_if_other_accused_agency
+entity_type: node
+bundle: issue
+label: 'If other, please identify the agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: 1188ef5d-b6ba-421e-a7b0-b370237d3246
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feedback_provided_agency
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_feedback_provided_agency
+field_name: field_feedback_provided_agency
+entity_type: node
+bundle: issue
+label: 'Case Feedback Provided To Survivor or Complainant by Investigating Agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

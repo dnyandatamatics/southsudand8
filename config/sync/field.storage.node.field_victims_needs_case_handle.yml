@@ -1,0 +1,20 @@
+uuid: 133c9f4b-399c-4e70-a708-768a4645ea7d
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_victims_needs_case_handle
+field_name: field_victims_needs_case_handle
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

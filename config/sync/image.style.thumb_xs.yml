@@ -1,0 +1,23 @@
+uuid: 2de629fb-3a55-473c-b519-80106edcd30d
+langcode: en
+status: true
+dependencies: {  }
+name: thumb_xs
+label: 'Thumb XS'
+effects:
+  1b2e430a-f64b-48fd-9cf6-219d97c2314a:
+    uuid: 1b2e430a-f64b-48fd-9cf6-219d97c2314a
+    id: image_scale
+    weight: 1
+    data:
+      width: 40
+      height: null
+      upscale: true
+  a0fd87a0-2ca6-4123-9390-9c883e975d2c:
+    uuid: a0fd87a0-2ca6-4123-9390-9c883e975d2c
+    id: image_crop
+    weight: 2
+    data:
+      width: 40
+      height: 40
+      anchor: center-center

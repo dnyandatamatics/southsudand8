@@ -1,0 +1,19 @@
+uuid: 7d48dc28-6465-45e3-ba78-9c9fa392b87d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_of_accused
+    - node.type.issue
+id: node.issue.field_address_of_accused
+field_name: field_address_of_accused
+entity_type: node
+bundle: issue
+label: 'Address of Accused (if known)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

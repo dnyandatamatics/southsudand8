@@ -1,0 +1,19 @@
+uuid: 94de9e9e-c0d9-4ffa-9c79-42ebadd629f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feedback_that_was_provided
+    - node.type.issue
+id: node.issue.field_feedback_that_was_provided
+field_name: field_feedback_that_was_provided
+entity_type: node
+bundle: issue
+label: 'Feedback that was provided'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,32 @@
+uuid: 68400b7b-92a4-4d7e-b865-a96d032aafb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.reporting_method.field_image
+    - taxonomy.vocabulary.reporting_method
+  module:
+    - image
+    - text
+id: taxonomy_term.reporting_method.default
+targetEntityType: taxonomy_term
+bundle: reporting_method
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    label: above
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

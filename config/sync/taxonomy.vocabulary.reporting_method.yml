@@ -1,0 +1,8 @@
+uuid: 98fcd12b-23e9-4af7-a266-d008c7b94cef
+langcode: en
+status: true
+dependencies: {  }
+name: 'Reporting Method'
+vid: reporting_method
+description: ''
+weight: 0

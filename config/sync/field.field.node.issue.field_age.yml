@@ -1,0 +1,23 @@
+uuid: 50ab2de7-4d5e-4959-a6e6-24f3c301655d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age
+    - node.type.issue
+id: node.issue.field_age
+field_name: field_age
+entity_type: node
+bundle: issue
+label: Age
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 8d9383f0-fb0a-4252-b9b5-37d93e6a638f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_camp_survivor
+    - node.type.issue
+id: node.issue.field_other_camp_survivor
+field_name: field_other_camp_survivor
+entity_type: node
+bundle: issue
+label: 'If other, please identify the camp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

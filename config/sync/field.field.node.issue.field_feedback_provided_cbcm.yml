@@ -1,0 +1,26 @@
+uuid: 4ce02bb0-e977-4ece-9d1e-d14eb7934f3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feedback_provided_cbcm
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_feedback_provided_cbcm
+field_name: field_feedback_provided_cbcm
+entity_type: node
+bundle: issue
+label: 'Case Feedback Provided To Survivor or Complainant by CBCM'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

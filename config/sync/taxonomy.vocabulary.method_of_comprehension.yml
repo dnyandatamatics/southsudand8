@@ -1,0 +1,8 @@
+uuid: 0321fed5-ad15-4430-a474-dc0fc690c9b3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Method of Comprehension'
+vid: method_of_comprehension
+description: ''
+weight: 0

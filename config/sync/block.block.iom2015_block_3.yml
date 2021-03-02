@@ -1,0 +1,30 @@
+uuid: 6a9e1b7e-2e96-415b-95cc-58439139a1c2
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c6d0f8dd-df4c-4a05-b0c7-0e129ada880f'
+  module:
+    - block_content
+    - system
+  theme:
+    - iom2015
+id: iom2015_block_3
+theme: iom2015
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:c6d0f8dd-df4c-4a05-b0c7-0e129ada880f'
+settings:
+  id: 'block_content:c6d0f8dd-df4c-4a05-b0c7-0e129ada880f'
+  label: 'First Sidebar'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

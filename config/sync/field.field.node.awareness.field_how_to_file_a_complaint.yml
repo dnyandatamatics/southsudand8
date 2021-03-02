@@ -1,0 +1,26 @@
+uuid: 85c8e06d-429e-435f-a7bc-f76d91b4b05e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how_to_file_a_complaint
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_how_to_file_a_complaint
+field_name: field_how_to_file_a_complaint
+entity_type: node
+bundle: awareness
+label: 'How to File a Complaint'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

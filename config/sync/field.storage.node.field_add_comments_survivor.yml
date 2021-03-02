@@ -1,0 +1,19 @@
+uuid: d18ec128-7326-4bb3-9349-cc2f906a96ef
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_add_comments_survivor
+field_name: field_add_comments_survivor
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

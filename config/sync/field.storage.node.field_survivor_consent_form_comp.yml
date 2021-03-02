@@ -1,0 +1,20 @@
+uuid: 6a6b87e0-ac65-4f51-836d-aba9e8b59c41
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_survivor_consent_form_comp
+field_name: field_survivor_consent_form_comp
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

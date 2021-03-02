@@ -1,0 +1,26 @@
+uuid: 7b2b1b2a-ce58-4655-ba77-438735642fbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_of_incident
+    - node.type.issue
+    - taxonomy.vocabulary.camp
+id: node.issue.field_location_of_incident
+field_name: field_location_of_incident
+entity_type: node
+bundle: issue
+label: 'Location of Incident'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      camp: camp
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 31c63d66-6abc-420c-af31-51308b59ea73
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_issue
+label: 'Content - Complaints'
+type: 'canonical_entities:node'
+pattern: 'complaints/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      issue: issue
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: 0
+relationships: {  }

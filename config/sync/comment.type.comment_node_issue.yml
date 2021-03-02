@@ -1,0 +1,8 @@
+uuid: 998fc003-c56b-407f-9d09-6dd497a3a753
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_issue
+label: 'Complaints comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,20 @@
+uuid: 462372db-e651-47e0-ab7e-520af280167f
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - iom2015
+id: iom2015_system_main
+theme: iom2015
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

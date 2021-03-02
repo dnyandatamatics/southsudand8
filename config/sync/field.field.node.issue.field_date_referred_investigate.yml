@@ -1,0 +1,21 @@
+uuid: ff68de2a-107a-43e2-afe3-68bb5d524a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_referred_investigate
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_referred_investigate
+field_name: field_date_referred_investigate
+entity_type: node
+bundle: issue
+label: 'Date/Time Allegation Referred'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

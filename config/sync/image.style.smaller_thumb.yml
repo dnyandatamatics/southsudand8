@@ -1,0 +1,23 @@
+uuid: b54b0917-b745-49e0-8009-6d512e8b4d17
+langcode: en
+status: true
+dependencies: {  }
+name: smaller_thumb
+label: 'Smaller Thumb'
+effects:
+  19ac0556-9ac2-4564-9ab6-9e620e14be65:
+    uuid: 19ac0556-9ac2-4564-9ab6-9e620e14be65
+    id: image_scale
+    weight: 1
+    data:
+      width: 75
+      height: null
+      upscale: true
+  34fdb982-3b7a-4cac-b1b7-1852b8558d48:
+    uuid: 34fdb982-3b7a-4cac-b1b7-1852b8558d48
+    id: image_crop
+    weight: 2
+    data:
+      width: 75
+      height: 75
+      anchor: center-center

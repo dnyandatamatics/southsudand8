@@ -1,0 +1,14 @@
+uuid: b242b5fc-31d0-40ff-b13d-86391d2a1b10
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awareness_staff
+  module:
+    - user
+id: user_remove_role_action.awareness_staff
+label: 'Remove the awareness staff role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: awareness_staff

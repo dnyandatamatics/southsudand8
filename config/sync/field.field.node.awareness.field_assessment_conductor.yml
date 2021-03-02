@@ -1,0 +1,26 @@
+uuid: 2e94804b-8733-48b3-afe4-2795113e44a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assessment_conductor
+    - node.type.awareness
+    - taxonomy.vocabulary.assessment_conductor
+id: node.awareness.field_assessment_conductor
+field_name: field_assessment_conductor
+entity_type: node
+bundle: awareness
+label: 'Who conducted the Assessment'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      assessment_conductor: assessment_conductor
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

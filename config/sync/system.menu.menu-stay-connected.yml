@@ -1,0 +1,8 @@
+uuid: 4a8f85d6-d6b7-48a9-b48e-882297299502
+langcode: en
+status: true
+dependencies: {  }
+id: menu-stay-connected
+label: 'STAY CONNECTED'
+description: ''
+locked: false

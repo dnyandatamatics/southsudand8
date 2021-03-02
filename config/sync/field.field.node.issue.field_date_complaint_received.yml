@@ -1,0 +1,21 @@
+uuid: 5b1339aa-6a45-4fb6-af86-f5849fd862ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_complaint_received
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_complaint_received
+field_name: field_date_complaint_received
+entity_type: node
+bundle: issue
+label: 'Date Complaint Received'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

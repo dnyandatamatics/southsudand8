@@ -1,0 +1,19 @@
+uuid: 412e74ce-1fd6-4439-841a-c66bc8f6355c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_lat
+    - taxonomy.vocabulary.camp
+id: taxonomy_term.camp.field_lat
+field_name: field_lat
+entity_type: taxonomy_term
+bundle: camp
+label: Lat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

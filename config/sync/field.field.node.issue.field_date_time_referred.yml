@@ -1,0 +1,21 @@
+uuid: 69b3da4c-3fb1-4a37-a240-401c69ff246d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_time_referred
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_time_referred
+field_name: field_date_time_referred
+entity_type: node
+bundle: issue
+label: 'Date/Time Referred For Services'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

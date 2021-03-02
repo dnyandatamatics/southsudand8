@@ -1,0 +1,16 @@
+uuid: e11f4506-cdf9-4daa-8a04-70c59eaa8952
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Awareness
+type: awareness
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

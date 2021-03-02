@@ -1,0 +1,19 @@
+uuid: b758afa7-2331-4ef7-a62c-be995bc633c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_identity_number
+    - node.type.issue
+id: node.issue.field_identity_number
+field_name: field_identity_number
+entity_type: node
+bundle: issue
+label: 'Identity/Tent/Biometric Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

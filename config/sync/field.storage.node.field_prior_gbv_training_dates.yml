@@ -1,0 +1,21 @@
+uuid: 2972e077-2bfe-4566-83d8-e1bc0a243086
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_prior_gbv_training_dates
+field_name: field_prior_gbv_training_dates
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

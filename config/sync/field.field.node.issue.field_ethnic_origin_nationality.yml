@@ -1,0 +1,19 @@
+uuid: c52fbb39-308a-490e-8ce4-f1b495ef514d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ethnic_origin_nationality
+    - node.type.issue
+id: node.issue.field_ethnic_origin_nationality
+field_name: field_ethnic_origin_nationality
+entity_type: node
+bundle: issue
+label: 'Ethnic origin/Nationality'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

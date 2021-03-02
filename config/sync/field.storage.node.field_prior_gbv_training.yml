@@ -1,0 +1,20 @@
+uuid: 394b91b6-7bf8-4d3c-9a55-fe65d6b6b22c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_prior_gbv_training
+field_name: field_prior_gbv_training
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 7757ed8a-ff81-4c8e-a080-2509bb8a2d3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referral_agency
+    - node.type.issue
+    - taxonomy.vocabulary.agency
+id: node.issue.field_referral_agency
+field_name: field_referral_agency
+entity_type: node
+bundle: issue
+label: 'Service Provider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      agency: agency
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

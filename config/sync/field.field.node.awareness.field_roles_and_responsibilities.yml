@@ -1,0 +1,26 @@
+uuid: 4f9b52ad-f15b-4e52-866f-28b9c3c48d0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_roles_and_responsibilities
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_roles_and_responsibilities
+field_name: field_roles_and_responsibilities
+entity_type: node
+bundle: awareness
+label: 'Roles and Responsibilities on PSEA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

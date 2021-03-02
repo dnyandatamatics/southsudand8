@@ -1,0 +1,30 @@
+uuid: 0bd5b4e6-5b11-4696-8f0d-69845ac91561
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:5ff08977-6a5b-4814-a233-4e6d602b6886'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap
+id: bootstrap_block_5
+theme: bootstrap
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:5ff08977-6a5b-4814-a233-4e6d602b6886'
+settings:
+  id: 'block_content:5ff08977-6a5b-4814-a233-4e6d602b6886'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/complaints-mechanism\n/complaints-mechanism-v2"

@@ -1,0 +1,15 @@
+uuid: 8a2fbd68-fcc9-49aa-9b69-a88b2963c584
+langcode: en
+status: true
+dependencies: {  }
+id: awareness_staff
+label: 'awareness staff'
+weight: 2
+is_admin: null
+permissions:
+  - 'access devel information'
+  - 'create awareness content'
+  - 'delete any awareness content'
+  - 'delete own awareness content'
+  - 'edit any awareness content'
+  - 'edit own awareness content'

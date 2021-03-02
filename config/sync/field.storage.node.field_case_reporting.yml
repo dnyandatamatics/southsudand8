@@ -1,0 +1,20 @@
+uuid: 7b359ffe-97fe-4207-ba76-43881ddc7fc4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_case_reporting
+field_name: field_case_reporting
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

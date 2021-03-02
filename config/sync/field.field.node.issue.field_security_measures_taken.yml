@@ -1,0 +1,19 @@
+uuid: d8ec79ba-57b2-4994-aa4e-d2474ee16fcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_security_measures_taken
+    - node.type.issue
+id: node.issue.field_security_measures_taken
+field_name: field_security_measures_taken
+entity_type: node
+bundle: issue
+label: 'Security Measures Taken'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

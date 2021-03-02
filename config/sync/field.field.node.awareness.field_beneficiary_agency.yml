@@ -1,0 +1,26 @@
+uuid: b3a41993-3307-472d-a165-6b568e6c8213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beneficiary_agency
+    - node.type.awareness
+    - taxonomy.vocabulary.agency
+id: node.awareness.field_beneficiary_agency
+field_name: field_beneficiary_agency
+entity_type: node
+bundle: awareness
+label: 'Beneficiary''s Agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      agency: agency
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

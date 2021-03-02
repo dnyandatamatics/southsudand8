@@ -1,0 +1,333 @@
+uuid: a1cc831e-507a-4e53-b415-4fff259cecfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_awareness.default
+    - field.field.node.awareness.comment_node_awareness
+    - field.field.node.awareness.field_age_group
+    - field.field.node.awareness.field_appropriate_conduct
+    - field.field.node.awareness.field_assessment_conductor
+    - field.field.node.awareness.field_assessment_method
+    - field.field.node.awareness.field_beneficiary
+    - field.field.node.awareness.field_beneficiary_agency
+    - field.field.node.awareness.field_camp_of_survivor
+    - field.field.node.awareness.field_case_reporting
+    - field.field.node.awareness.field_date_recorded
+    - field.field.node.awareness.field_how_to_file_a_complaint
+    - field.field.node.awareness.field_meaning_of_sea
+    - field.field.node.awareness.field_method_of_comprehension
+    - field.field.node.awareness.field_method_of_contact
+    - field.field.node.awareness.field_other_assessment_conductor
+    - field.field.node.awareness.field_other_beneficiary
+    - field.field.node.awareness.field_other_camp_survivor
+    - field.field.node.awareness.field_other_method_comprehension
+    - field.field.node.awareness.field_other_source_sea_info
+    - field.field.node.awareness.field_prior_gbv_training
+    - field.field.node.awareness.field_prior_gbv_training_dates
+    - field.field.node.awareness.field_prior_psea_training
+    - field.field.node.awareness.field_prior_psea_training_dates
+    - field.field.node.awareness.field_refugee_rights_sea
+    - field.field.node.awareness.field_risk_sea
+    - field.field.node.awareness.field_roles_and_responsibilities
+    - field.field.node.awareness.field_sex
+    - field.field.node.awareness.field_source_of_sea_information
+    - field.field.node.awareness.field_special_needs_of_children
+    - field.field.node.awareness.field_victims_needs_case_handle
+    - field.field.node.awareness.field_vulnerability_factors
+    - field.field.node.awareness.field_work_sector_of_accused
+    - node.type.awareness
+  module:
+    - comment
+    - datetime
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_beneficiary:
+      children:
+        - field_date_recorded
+        - field_beneficiary
+        - field_method_of_contact
+        - field_assessment_method
+        - field_beneficiary_agency
+        - field_sex
+        - field_camp_of_survivor
+        - field_vulnerability_factors
+        - field_method_of_comprehension
+        - field_assessment_conductor
+        - field_source_of_sea_information
+        - field_work_sector_of_accused
+        - field_prior_psea_training
+        - field_prior_psea_training_dates
+        - field_prior_gbv_training
+        - field_prior_gbv_training_dates
+        - field_age_group
+        - title
+      parent_name: ''
+      weight: 0
+      label: Beneficiary
+      format_settings:
+        label: Beneficiary
+        formatter: open
+        id: ''
+        classes: 'group-beneficiary field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_comprehension:
+      children:
+        - field_meaning_of_sea
+        - field_risk_sea
+        - field_refugee_rights_sea
+        - field_case_reporting
+        - field_how_to_file_a_complaint
+        - field_appropriate_conduct
+        - field_victims_needs_case_handle
+        - field_special_needs_of_children
+        - field_roles_and_responsibilities
+      parent_name: ''
+      weight: 1
+      label: 'Level of Comprehension'
+      format_settings:
+        label: 'Level of Comprehension'
+        formatter: open
+        id: ''
+        classes: 'group-comprehension field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+id: node.awareness.default
+targetEntityType: node
+bundle: awareness
+mode: default
+content:
+  comment_node_awareness:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_age_group:
+    label: inline
+    weight: 42
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_appropriate_conduct:
+    label: inline
+    weight: 12
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_assessment_conductor:
+    label: inline
+    weight: 47
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_assessment_method:
+    label: inline
+    weight: 40
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_beneficiary:
+    label: inline
+    weight: 39
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_beneficiary_agency:
+    label: inline
+    weight: 41
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_camp_of_survivor:
+    label: inline
+    weight: 44
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_case_reporting:
+    label: inline
+    weight: 10
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_date_recorded:
+    label: inline
+    weight: 37
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_how_to_file_a_complaint:
+    label: inline
+    weight: 11
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_meaning_of_sea:
+    label: inline
+    weight: 7
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_method_of_comprehension:
+    label: inline
+    weight: 45
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_method_of_contact:
+    label: inline
+    weight: 38
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_prior_gbv_training:
+    label: inline
+    weight: 53
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_prior_gbv_training_dates:
+    label: inline
+    weight: 52
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_prior_psea_training:
+    label: inline
+    weight: 49
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_prior_psea_training_dates:
+    label: inline
+    weight: 51
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_refugee_rights_sea:
+    label: inline
+    weight: 9
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_risk_sea:
+    label: inline
+    weight: 8
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_roles_and_responsibilities:
+    label: inline
+    weight: 15
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_sex:
+    label: inline
+    weight: 43
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_source_of_sea_information:
+    label: inline
+    weight: 48
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_special_needs_of_children:
+    label: inline
+    weight: 14
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_victims_needs_case_handle:
+    label: inline
+    weight: 13
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_vulnerability_factors:
+    label: above
+    weight: 46
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_work_sector_of_accused:
+    label: inline
+    weight: 50
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_other_assessment_conductor: true
+  field_other_beneficiary: true
+  field_other_camp_survivor: true
+  field_other_method_comprehension: true
+  field_other_source_sea_info: true

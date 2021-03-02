@@ -1,0 +1,26 @@
+uuid: c8000a86-30df-4558-a5af-0281b547a02a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_allegation_referred
+    - node.type.issue
+    - taxonomy.vocabulary.agency
+id: node.issue.field_agency_allegation_referred
+field_name: field_agency_allegation_referred
+entity_type: node
+bundle: issue
+label: 'Agency Allegation Referred to'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      agency: agency
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

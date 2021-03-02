@@ -1,0 +1,26 @@
+uuid: 2889eaee-8ad3-4926-bf79-5e3bec52b622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prior_psea_training
+    - node.type.awareness
+    - taxonomy.vocabulary.yes_no
+id: node.awareness.field_prior_psea_training
+field_name: field_prior_psea_training
+entity_type: node
+bundle: awareness
+label: 'Prior PSEA Training'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

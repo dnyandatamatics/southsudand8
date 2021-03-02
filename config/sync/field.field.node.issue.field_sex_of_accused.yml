@@ -1,0 +1,26 @@
+uuid: 359d4715-ea73-4229-bc8d-68394846f468
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sex_of_accused
+    - node.type.issue
+    - taxonomy.vocabulary.sex
+id: node.issue.field_sex_of_accused
+field_name: field_sex_of_accused
+entity_type: node
+bundle: issue
+label: 'Sex of Accused'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      sex: sex
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

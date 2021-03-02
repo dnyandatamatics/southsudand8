@@ -1,0 +1,19 @@
+uuid: 897cddee-4676-49e2-ab00-cd80e107752f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relevant_dates_of_issue
+    - node.type.issue
+id: node.issue.field_relevant_dates_of_issue
+field_name: field_relevant_dates_of_issue
+entity_type: node
+bundle: issue
+label: 'Relevant Date(s) of Issue'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

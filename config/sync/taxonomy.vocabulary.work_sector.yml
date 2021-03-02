@@ -1,0 +1,8 @@
+uuid: f315d719-34b2-4345-bb46-65d855a833ac
+langcode: en
+status: true
+dependencies: {  }
+name: 'Work Sector'
+vid: work_sector
+description: ''
+weight: 0

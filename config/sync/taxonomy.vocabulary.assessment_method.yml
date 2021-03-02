@@ -1,0 +1,8 @@
+uuid: d48b03c4-fb27-4377-b206-df7742782169
+langcode: en
+status: true
+dependencies: {  }
+name: 'Assessment Method'
+vid: assessment_method
+description: ''
+weight: 0

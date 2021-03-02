@@ -1,0 +1,19 @@
+uuid: 2a2659bd-0a75-4a82-befc-06a86d12431a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_incident_description
+    - node.type.issue
+id: node.issue.field_incident_description
+field_name: field_incident_description
+entity_type: node
+bundle: issue
+label: 'Brief description of Incident(s), including specific location(s) where incident(s) occurred'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

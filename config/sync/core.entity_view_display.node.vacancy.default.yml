@@ -1,0 +1,79 @@
+uuid: 12f71306-e93b-4a91-a079-50034f454b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_vacancy.default
+    - field.field.node.vacancy.body
+    - field.field.node.vacancy.comment_node_vacancy
+    - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_document
+    - field.field.node.vacancy.field_duty_station
+    - field.field.node.vacancy.field_grade
+    - node.type.vacancy
+  module:
+    - comment
+    - datetime
+    - file
+    - text
+    - user
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_vacancy:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_closing_date:
+    label: above
+    weight: 3
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_document:
+    label: above
+    weight: 4
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_duty_station:
+    label: above
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_grade:
+    label: above
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

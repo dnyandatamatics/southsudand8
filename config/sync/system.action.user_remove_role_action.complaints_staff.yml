@@ -1,0 +1,14 @@
+uuid: 05470e4b-b90d-4fe2-80e8-56b29bd0f611
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.complaints_staff
+  module:
+    - user
+id: user_remove_role_action.complaints_staff
+label: 'Remove the complaints staff role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: complaints_staff

@@ -1,0 +1,26 @@
+uuid: 398deb5f-96f2-4d25-b56c-ba800ff6c1e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_responsible_secure
+    - node.type.issue
+    - taxonomy.vocabulary.agency
+id: node.issue.field_agency_responsible_secure
+field_name: field_agency_responsible_secure
+entity_type: node
+bundle: issue
+label: 'Agency Responsible for Ensuring Safety Plan'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      agency: agency
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: 2370f576-ce55-4e30-abad-f29661981e19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_method_of_comprehension
+    - node.type.awareness
+    - taxonomy.vocabulary.method_of_comprehension
+id: node.awareness.field_method_of_comprehension
+field_name: field_method_of_comprehension
+entity_type: node
+bundle: awareness
+label: 'Method of Comprehension Measurement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      method_of_comprehension: method_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

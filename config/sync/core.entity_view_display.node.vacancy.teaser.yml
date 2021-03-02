@@ -1,0 +1,40 @@
+uuid: 994d3c2d-506a-42b3-9250-6cfb59a37dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vacancy.body
+    - field.field.node.vacancy.comment_node_vacancy
+    - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_document
+    - field.field.node.vacancy.field_duty_station
+    - field.field.node.vacancy.field_grade
+    - node.type.vacancy
+  module:
+    - text
+    - user
+id: node.vacancy.teaser
+targetEntityType: node
+bundle: vacancy
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_vacancy: true
+  field_closing_date: true
+  field_document: true
+  field_duty_station: true
+  field_grade: true

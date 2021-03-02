@@ -1,0 +1,8 @@
+uuid: 7523df85-f4ee-4c86-86c8-c2b1aeb16537
+langcode: en
+status: true
+dependencies: {  }
+name: Beneficiary
+vid: beneficiary
+description: ''
+weight: 0

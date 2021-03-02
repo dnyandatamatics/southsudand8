@@ -1,0 +1,26 @@
+uuid: 1e6a8f48-1815-428b-a570-232f8384a2ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meaning_of_sea
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_meaning_of_sea
+field_name: field_meaning_of_sea
+entity_type: node
+bundle: awareness
+label: 'Meaning of SEA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

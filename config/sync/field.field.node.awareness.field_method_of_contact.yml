@@ -1,0 +1,26 @@
+uuid: e54af901-b897-4f6d-b6e6-8519967d83c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_method_of_contact
+    - node.type.awareness
+    - taxonomy.vocabulary.method_of_contact_awareness
+id: node.awareness.field_method_of_contact
+field_name: field_method_of_contact
+entity_type: node
+bundle: awareness
+label: 'Method of Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      method_of_contact_awareness: method_of_contact_awareness
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

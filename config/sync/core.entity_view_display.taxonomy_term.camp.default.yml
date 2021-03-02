@@ -1,0 +1,39 @@
+uuid: 03235f9f-3da4-4d7a-865f-46f29cb5f34e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.camp.field_lat
+    - field.field.taxonomy_term.camp.field_long
+    - taxonomy.vocabulary.camp
+  module:
+    - text
+id: taxonomy_term.camp.default
+targetEntityType: taxonomy_term
+bundle: camp
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lat:
+    label: above
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_long:
+    label: above
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

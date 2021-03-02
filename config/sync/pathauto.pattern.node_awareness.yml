@@ -1,0 +1,21 @@
+uuid: 53089b5b-a092-4c25-8824-68c7214f71bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_awareness
+label: 'Content - Awareness'
+type: 'canonical_entities:node'
+pattern: 'awareness/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      awareness: awareness
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: 0
+relationships: {  }

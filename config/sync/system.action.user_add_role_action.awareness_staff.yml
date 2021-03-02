@@ -1,0 +1,14 @@
+uuid: 4ef519c2-37c6-4da0-bd5a-694324d66869
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awareness_staff
+  module:
+    - user
+id: user_add_role_action.awareness_staff
+label: 'Add the awareness staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: awareness_staff

@@ -1,0 +1,21 @@
+uuid: a46c9325-d3ad-4c58-951b-afad006d99c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_feedback_prov_cbcm
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_feedback_prov_cbcm
+field_name: field_date_feedback_prov_cbcm
+entity_type: node
+bundle: issue
+label: 'Date Feedback Provided'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,26 @@
+uuid: b8dc4415-d06f-44a9-8888-6a49b61f6bb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_of_sea_information
+    - node.type.awareness
+    - taxonomy.vocabulary.source_of_sea_information
+id: node.awareness.field_source_of_sea_information
+field_name: field_source_of_sea_information
+entity_type: node
+bundle: awareness
+label: 'Source of SEA information'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      source_of_sea_information: source_of_sea_information
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

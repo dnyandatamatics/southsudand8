@@ -1,0 +1,21 @@
+uuid: 9867b619-cb8e-4ae6-a930-8edf1236c4ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_feedback_prov_agency
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_feedback_prov_agency
+field_name: field_date_feedback_prov_agency
+entity_type: node
+bundle: issue
+label: 'Date Feedback Provided'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

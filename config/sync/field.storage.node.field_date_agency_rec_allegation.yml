@@ -1,0 +1,20 @@
+uuid: 4133f5f0-cf0b-4baf-9aa2-23b89a85f017
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_agency_rec_allegation
+field_name: field_date_agency_rec_allegation
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

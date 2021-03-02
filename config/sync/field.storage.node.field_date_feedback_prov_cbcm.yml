@@ -1,0 +1,20 @@
+uuid: f2b1f1b2-4ab9-4778-938b-8c02c08a740a
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_feedback_prov_cbcm
+field_name: field_date_feedback_prov_cbcm
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

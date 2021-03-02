@@ -1,0 +1,26 @@
+uuid: 38124cea-fafc-4053-b012-4d96afdaa3a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_risk_sea
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_risk_sea
+field_name: field_risk_sea
+entity_type: node
+bundle: awareness
+label: 'Risks and Consequences of SEA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

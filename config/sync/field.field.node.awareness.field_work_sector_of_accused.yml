@@ -1,0 +1,26 @@
+uuid: 6b1ef115-e91e-4218-8dbf-c0b5feda0730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_sector_of_accused
+    - node.type.awareness
+    - taxonomy.vocabulary.work_sector
+id: node.awareness.field_work_sector_of_accused
+field_name: field_work_sector_of_accused
+entity_type: node
+bundle: awareness
+label: 'Sector of Work'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      work_sector: work_sector
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

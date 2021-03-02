@@ -1,0 +1,24 @@
+uuid: 2a2ee36a-0534-4782-a208-c498a6b66199
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - iom2015
+id: iom2015_menu_menu_stay_connected
+theme: iom2015
+region: ''
+weight: -10
+provider: null
+plugin: 'system_menu_block:menu-stay-connected'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

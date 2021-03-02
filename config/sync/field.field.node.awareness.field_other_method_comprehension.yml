@@ -1,0 +1,19 @@
+uuid: 8da0a97b-365e-4011-a3e3-2c7437a03096
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_method_comprehension
+    - node.type.awareness
+id: node.awareness.field_other_method_comprehension
+field_name: field_other_method_comprehension
+entity_type: node
+bundle: awareness
+label: 'If other, please identify who conducted the assessment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 6c176faa-4697-45ee-a681-debb9700caa3
+langcode: en
+status: true
+dependencies: {  }
+name: new_slideshow
+label: 'New Slideshow'
+effects:
+  7e3ee17a-e1a2-4280-b388-ab7e0aac99a5:
+    uuid: 7e3ee17a-e1a2-4280-b388-ab7e0aac99a5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 515
+      anchor: center-center
+  4b7bb9af-69f6-415e-a1db-e0b3e5efbb31:
+    uuid: 4b7bb9af-69f6-415e-a1db-e0b3e5efbb31
+    id: image_crop
+    weight: 2
+    data:
+      width: 1200
+      height: 515
+      anchor: center-center

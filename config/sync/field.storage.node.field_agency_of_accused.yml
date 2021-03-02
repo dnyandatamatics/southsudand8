@@ -1,0 +1,20 @@
+uuid: 1acf1d8a-748d-4e61-899f-271460d896e6
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_agency_of_accused
+field_name: field_agency_of_accused
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
