@@ -1,0 +1,20 @@
+uuid: 643a2ccf-2717-4245-88bb-1b86129d6eff
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_prior_psea_training
+field_name: field_prior_psea_training
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 0c945e6a-c355-4679-9bb0-693a73501bf7
+langcode: en
+status: true
+dependencies: {  }
+name: Camp
+vid: camp
+description: ''
+weight: 0

@@ -1,0 +1,20 @@
+uuid: e5b78d5e-0829-49f3-b024-8bc0b82e3cbd
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_complainant_satisfaction
+field_name: field_complainant_satisfaction
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

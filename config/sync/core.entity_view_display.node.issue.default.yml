@@ -1,0 +1,765 @@
+uuid: 6ca0e26f-64b3-418a-b546-dee55961479d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_issue.default
+    - field.field.node.issue.comment_node_issue
+    - field.field.node.issue.field_add_comments_survivor
+    - field.field.node.issue.field_add_date_feedback_provided
+    - field.field.node.issue.field_add_feedback_prov_agency
+    - field.field.node.issue.field_add_feedback_provided
+    - field.field.node.issue.field_address_of_accused
+    - field.field.node.issue.field_age
+    - field.field.node.issue.field_age_group
+    - field.field.node.issue.field_agency_allegation_referred
+    - field.field.node.issue.field_agency_of_accused
+    - field.field.node.issue.field_agency_receipt_allegation
+    - field.field.node.issue.field_agency_responsible_secure
+    - field.field.node.issue.field_assistance_provided
+    - field.field.node.issue.field_camp_of_survivor
+    - field.field.node.issue.field_case_outcome
+    - field.field.node.issue.field_complainant_satisfaction
+    - field.field.node.issue.field_contact_details
+    - field.field.node.issue.field_date_agency_rec_allegation
+    - field.field.node.issue.field_date_and_time_of_incident
+    - field.field.node.issue.field_date_complaint_received
+    - field.field.node.issue.field_date_feedback_prov_agency
+    - field.field.node.issue.field_date_feedback_prov_cbcm
+    - field.field.node.issue.field_date_of_case_resolution
+    - field.field.node.issue.field_date_recorded
+    - field.field.node.issue.field_date_referred_investigate
+    - field.field.node.issue.field_date_time_referred
+    - field.field.node.issue.field_ethnic_origin_nationality
+    - field.field.node.issue.field_feedback_provided_agency
+    - field.field.node.issue.field_feedback_provided_cbcm
+    - field.field.node.issue.field_feedback_provided_txt_cbcm
+    - field.field.node.issue.field_feedback_that_was_provided
+    - field.field.node.issue.field_follow_up_cbcm
+    - field.field.node.issue.field_identity_number
+    - field.field.node.issue.field_if_other_accused_agency
+    - field.field.node.issue.field_incident_description
+    - field.field.node.issue.field_information_required
+    - field.field.node.issue.field_job_title_of_accused
+    - field.field.node.issue.field_location_of_incident
+    - field.field.node.issue.field_name_of_accused_person
+    - field.field.node.issue.field_name_of_complainant
+    - field.field.node.issue.field_name_of_survivor
+    - field.field.node.issue.field_non_sea_complaint
+    - field.field.node.issue.field_other_agency_safety_plan
+    - field.field.node.issue.field_other_camp_survivor
+    - field.field.node.issue.field_other_vulnerability_factor
+    - field.field.node.issue.field_parent_details
+    - field.field.node.issue.field_physical_desc_accused
+    - field.field.node.issue.field_priority_level
+    - field.field.node.issue.field_referral_agency
+    - field.field.node.issue.field_referral_agency_other
+    - field.field.node.issue.field_relevant_dates_of_issue
+    - field.field.node.issue.field_reporting_method
+    - field.field.node.issue.field_required_security_measures
+    - field.field.node.issue.field_security_measures_taken
+    - field.field.node.issue.field_sex
+    - field.field.node.issue.field_sex_of_accused
+    - field.field.node.issue.field_status_of_case
+    - field.field.node.issue.field_survivor_complainant_rate
+    - field.field.node.issue.field_survivor_consent_form_comp
+    - field.field.node.issue.field_survivor_informed_services
+    - field.field.node.issue.field_survivor_satisfaction
+    - field.field.node.issue.field_vulnerability_factors
+    - field.field.node.issue.field_witness
+    - field.field.node.issue.field_work_sector_of_accused
+    - node.type.issue
+  module:
+    - comment
+    - datetime
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_general_info:
+      children:
+        - field_date_recorded
+        - field_date_complaint_received
+        - field_priority_level
+        - field_non_sea_complaint
+        - field_name_of_complainant
+        - field_contact_details
+        - field_reporting_method
+        - title
+      parent_name: ''
+      weight: 0
+      label: 'General Information'
+      format_settings:
+        label: 'General Information'
+        formatter: open
+        id: ''
+        classes: 'group-general-info field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_survivor_details:
+      children:
+        - field_name_of_survivor
+        - field_identity_number
+        - field_camp_of_survivor
+        - field_survivor_consent_form_comp
+        - field_age_group
+        - field_sex
+        - field_parent_details
+        - field_vulnerability_factors
+        - field_ethnic_origin_nationality
+      parent_name: ''
+      weight: 1
+      label: 'Survivor Details'
+      format_settings:
+        label: 'Survivor Details'
+        formatter: open
+        id: ''
+        classes: 'group-survivor-details field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_incident_details:
+      children:
+        - field_date_and_time_of_incident
+        - field_location_of_incident
+        - field_incident_description
+        - field_witness
+      parent_name: ''
+      weight: 2
+      label: 'Incident Details'
+      format_settings:
+        label: 'Incident Details'
+        formatter: open
+        id: ''
+        classes: 'group-incident-details field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_accused:
+      children:
+        - field_name_of_accused_person
+        - field_agency_of_accused
+        - field_work_sector_of_accused
+        - field_job_title_of_accused
+        - field_address_of_accused
+        - field_age
+        - field_sex_of_accused
+        - field_physical_desc_accused
+      parent_name: ''
+      weight: 3
+      label: 'The Accused'
+      format_settings:
+        label: 'The Accused'
+        formatter: open
+        id: ''
+        classes: 'group-accused field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_security:
+      children:
+        - field_required_security_measures
+        - field_security_measures_taken
+        - field_agency_responsible_secure
+      parent_name: ''
+      weight: 4
+      label: 'Security / Safety'
+      format_settings:
+        label: 'Security / Safety'
+        formatter: open
+        id: ''
+        classes: 'group-security field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_referral_details:
+      children:
+        - group_referral_victim_assistance
+        - group_allegation_referral
+      parent_name: ''
+      weight: 5
+      label: 'Referral Details'
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: 'group-referral-details field-group-fieldset'
+        id: ''
+      format_type: fieldset
+      region: content
+    group_referral_victim_assistance:
+      children:
+        - field_date_referred_investigate
+        - field_agency_allegation_referred
+        - field_agency_receipt_allegation
+        - field_date_agency_rec_allegation
+        - field_follow_up_cbcm
+        - field_information_required
+      parent_name: group_referral_details
+      weight: 48
+      label: 'Referral for Victim Assistance'
+      format_settings:
+        label: 'Referral for Victim Assistance'
+        formatter: open
+        id: ''
+        classes: 'group-referral-victim-assistance field-group-fieldset'
+        description: ''
+        show_label: true
+        label_element: h3
+        effect: none
+        speed: fast
+        element: div
+      format_type: html_element
+      region: content
+    group_allegation_referral:
+      children:
+        - field_survivor_informed_services
+        - field_assistance_provided
+        - field_referral_agency
+        - field_date_time_referred
+      parent_name: group_referral_details
+      weight: 47
+      label: 'Allegation Referral'
+      format_settings:
+        label: 'Allegation Referral'
+        formatter: open
+        id: ''
+        classes: 'group-allegation-referral field-group-fieldset'
+        description: ''
+        show_label: true
+        label_element: h3
+        effect: none
+        speed: fast
+        element: div
+      format_type: html_element
+      region: content
+    group_case_status:
+      children:
+        - field_status_of_case
+        - field_case_outcome
+        - field_date_of_case_resolution
+      parent_name: ''
+      weight: 6
+      label: 'Case Status'
+      format_settings:
+        label: 'Case Status'
+        formatter: open
+        id: ''
+        classes: 'group-case-status field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_feedback:
+      children:
+        - field_feedback_provided_agency
+        - field_date_feedback_prov_agency
+        - field_feedback_that_was_provided
+        - field_add_feedback_prov_agency
+        - field_add_date_feedback_provided
+        - field_add_feedback_provided
+        - field_feedback_provided_cbcm
+        - field_date_feedback_prov_cbcm
+        - field_feedback_provided_txt_cbcm
+        - field_complainant_satisfaction
+        - field_survivor_satisfaction
+        - field_survivor_complainant_rate
+        - field_add_comments_survivor
+      parent_name: ''
+      weight: 7
+      label: 'Feedback / Satisfaction'
+      format_settings:
+        label: 'Feedback / Satisfaction'
+        formatter: open
+        id: ''
+        classes: 'group-feedback field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+id: node.issue.default
+targetEntityType: node
+bundle: issue
+mode: default
+content:
+  comment_node_issue:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_add_comments_survivor:
+    label: above
+    weight: 25
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_add_date_feedback_provided:
+    label: inline
+    weight: 17
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_add_feedback_prov_agency:
+    label: inline
+    weight: 16
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_add_feedback_provided:
+    label: above
+    weight: 18
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address_of_accused:
+    label: inline
+    weight: 11
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_age:
+    label: inline
+    weight: 12
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_age_group:
+    label: inline
+    weight: 9
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_agency_allegation_referred:
+    label: inline
+    weight: 13
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_agency_of_accused:
+    label: inline
+    weight: 8
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_agency_receipt_allegation:
+    label: inline
+    weight: 14
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_agency_responsible_secure:
+    label: inline
+    weight: 11
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_assistance_provided:
+    label: above
+    weight: 14
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_camp_of_survivor:
+    label: inline
+    weight: 6
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_case_outcome:
+    label: above
+    weight: 13
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_complainant_satisfaction:
+    label: inline
+    weight: 22
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_contact_details:
+    label: inline
+    weight: 78
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_date_agency_rec_allegation:
+    label: inline
+    weight: 15
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_and_time_of_incident:
+    label: inline
+    weight: 6
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_complaint_received:
+    label: inline
+    weight: 72
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_feedback_prov_agency:
+    label: inline
+    weight: 14
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_feedback_prov_cbcm:
+    label: inline
+    weight: 20
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_of_case_resolution:
+    label: inline
+    weight: 14
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_recorded:
+    label: inline
+    weight: 71
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_referred_investigate:
+    label: inline
+    weight: 12
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_date_time_referred:
+    label: inline
+    weight: 11
+    type: datetime_default
+    settings:
+      format_type: really_short
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_ethnic_origin_nationality:
+    label: inline
+    weight: 11
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_feedback_provided_agency:
+    label: inline
+    weight: 13
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_feedback_provided_cbcm:
+    label: inline
+    weight: 19
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_feedback_provided_txt_cbcm:
+    label: above
+    weight: 21
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_feedback_that_was_provided:
+    label: above
+    weight: 15
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_follow_up_cbcm:
+    label: inline
+    weight: 16
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_identity_number:
+    label: inline
+    weight: 5
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_incident_description:
+    label: above
+    weight: 8
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_information_required:
+    label: above
+    weight: 17
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_job_title_of_accused:
+    label: inline
+    weight: 10
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_location_of_incident:
+    label: inline
+    weight: 7
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_name_of_accused_person:
+    label: inline
+    weight: 7
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_name_of_complainant:
+    label: inline
+    weight: 77
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_name_of_survivor:
+    label: inline
+    weight: 4
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_non_sea_complaint:
+    label: inline
+    weight: 74
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_parent_details:
+    label: inline
+    weight: 10
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_physical_desc_accused:
+    label: above
+    weight: 14
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_priority_level:
+    label: inline
+    weight: 73
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_referral_agency:
+    label: inline
+    weight: 13
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_relevant_dates_of_issue:
+    label: above
+    weight: 79
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_reporting_method:
+    label: inline
+    weight: 75
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_required_security_measures:
+    label: inline
+    weight: 9
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_security_measures_taken:
+    label: inline
+    weight: 10
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sex:
+    label: inline
+    weight: 8
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_sex_of_accused:
+    label: inline
+    weight: 13
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_status_of_case:
+    label: inline
+    weight: 12
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_survivor_complainant_rate:
+    label: inline
+    weight: 24
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_survivor_consent_form_comp:
+    label: inline
+    weight: 7
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_survivor_informed_services:
+    label: inline
+    weight: 10
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_survivor_satisfaction:
+    label: inline
+    weight: 23
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_vulnerability_factors:
+    label: above
+    weight: 12
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_witness:
+    label: above
+    weight: 9
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_work_sector_of_accused:
+    label: inline
+    weight: 9
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_if_other_accused_agency: true
+  field_other_agency_safety_plan: true
+  field_other_camp_survivor: true
+  field_other_vulnerability_factor: true
+  field_referral_agency_other: true

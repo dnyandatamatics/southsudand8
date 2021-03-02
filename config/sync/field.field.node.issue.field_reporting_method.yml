@@ -1,0 +1,26 @@
+uuid: ae7602a0-f1ad-4a17-b65b-68c9d05d22f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reporting_method
+    - node.type.issue
+    - taxonomy.vocabulary.reporting_method
+id: node.issue.field_reporting_method
+field_name: field_reporting_method
+entity_type: node
+bundle: issue
+label: 'Reporting Method'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      reporting_method: reporting_method
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

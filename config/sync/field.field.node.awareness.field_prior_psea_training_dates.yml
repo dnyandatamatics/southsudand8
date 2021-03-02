@@ -1,0 +1,19 @@
+uuid: eabb4886-e0eb-4a20-bcea-8cf7195bd84d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prior_psea_training_dates
+    - node.type.awareness
+id: node.awareness.field_prior_psea_training_dates
+field_name: field_prior_psea_training_dates
+entity_type: node
+bundle: awareness
+label: 'Prior PSEA Training dates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

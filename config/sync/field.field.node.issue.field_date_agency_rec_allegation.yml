@@ -1,0 +1,21 @@
+uuid: e6c9bfd9-9535-4f2a-a3f4-77e533289ae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_agency_rec_allegation
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_agency_rec_allegation
+field_name: field_date_agency_rec_allegation
+entity_type: node
+bundle: issue
+label: 'Date Agency Confirmed Receipt of Allegation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

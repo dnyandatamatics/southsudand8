@@ -1,0 +1,26 @@
+uuid: 30c857e7-b23e-448a-bbe9-73566fc193ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_follow_up_cbcm
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_follow_up_cbcm
+field_name: field_follow_up_cbcm
+entity_type: node
+bundle: issue
+label: 'Any Follow-up Information Required by Investigating Agency from CBCM?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

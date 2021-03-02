@@ -1,0 +1,26 @@
+uuid: a916f002-4ad7-47f5-a87c-fbcf48909d68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_reporting
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_case_reporting
+field_name: field_case_reporting
+entity_type: node
+bundle: awareness
+label: 'Case Reporting and Referral Procedures'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

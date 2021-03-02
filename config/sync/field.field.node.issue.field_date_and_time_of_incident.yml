@@ -1,0 +1,21 @@
+uuid: fe34df55-143b-4af0-865c-d8e2f9c04390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_and_time_of_incident
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_date_and_time_of_incident
+field_name: field_date_and_time_of_incident
+entity_type: node
+bundle: issue
+label: 'Date and Time of Incident'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

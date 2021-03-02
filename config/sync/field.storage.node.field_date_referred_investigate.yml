@@ -1,0 +1,20 @@
+uuid: cdcbb219-c6e9-47b3-aba3-3008b95ae134
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_referred_investigate
+field_name: field_date_referred_investigate
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 3f4337f6-d60e-4714-8b63-45fecf4bce31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_of_survivor
+    - node.type.issue
+    - taxonomy.vocabulary.camp
+id: node.issue.field_camp_of_survivor
+field_name: field_camp_of_survivor
+entity_type: node
+bundle: issue
+label: 'Camp of Survivor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      camp: camp
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

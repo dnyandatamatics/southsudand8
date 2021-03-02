@@ -1,0 +1,19 @@
+uuid: ec3df565-b3ea-4cab-ad60-0378ed332579
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_incident_description
+field_name: field_incident_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

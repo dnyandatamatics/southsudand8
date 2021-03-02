@@ -1,0 +1,8 @@
+uuid: f500965e-d122-4dbe-af94-bdc7db33c1fa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Method of Contact (Awareness)'
+vid: method_of_contact_awareness
+description: ''
+weight: 0

@@ -1,0 +1,26 @@
+uuid: 3bed79b3-c13a-4ea3-ba35-615991376baf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_non_sea_complaint
+    - node.type.issue
+    - taxonomy.vocabulary.non_sea_complaints
+id: node.issue.field_non_sea_complaint
+field_name: field_non_sea_complaint
+entity_type: node
+bundle: issue
+label: 'Type of Complaint (non SEA)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      non_sea_complaints: non_sea_complaints
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

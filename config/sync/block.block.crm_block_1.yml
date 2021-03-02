@@ -1,0 +1,25 @@
+uuid: a2ba6157-517b-4c96-b902-4092b22b69ce
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6f74faae-7597-4334-9dc8-b5b936dba395'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: crm_block_1
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+settings:
+  id: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

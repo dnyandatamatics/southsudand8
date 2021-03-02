@@ -1,0 +1,21 @@
+uuid: 5bd97b6a-f3e5-462a-9bf2-7123899b0dda
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_name_of_survivor
+field_name: field_name_of_survivor
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

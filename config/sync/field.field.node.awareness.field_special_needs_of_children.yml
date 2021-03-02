@@ -1,0 +1,26 @@
+uuid: 6f49bd12-78ae-42bb-8838-343ca8b97147
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_needs_of_children
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_special_needs_of_children
+field_name: field_special_needs_of_children
+entity_type: node
+bundle: awareness
+label: 'Special Needs of Children'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

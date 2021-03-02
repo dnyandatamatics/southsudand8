@@ -1,0 +1,14 @@
+uuid: accd4b4d-ee4a-4e31-8265-4ee47bcad491
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.complaints_staff
+  module:
+    - user
+id: user_add_role_action.complaints_staff
+label: 'Add the complaints staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: complaints_staff

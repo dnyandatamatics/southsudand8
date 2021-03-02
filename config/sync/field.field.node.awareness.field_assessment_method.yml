@@ -1,0 +1,26 @@
+uuid: cf15625c-b34e-46f7-8bc3-285ee6dc2f94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assessment_method
+    - node.type.awareness
+    - taxonomy.vocabulary.assessment_method
+id: node.awareness.field_assessment_method
+field_name: field_assessment_method
+entity_type: node
+bundle: awareness
+label: 'Assessment Method'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      assessment_method: assessment_method
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

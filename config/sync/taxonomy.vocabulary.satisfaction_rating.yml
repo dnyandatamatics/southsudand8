@@ -1,0 +1,8 @@
+uuid: 76fe123d-cb50-4267-a1c5-b609b9390a2c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Satisfaction Rating'
+vid: satisfaction_rating
+description: ''
+weight: 0

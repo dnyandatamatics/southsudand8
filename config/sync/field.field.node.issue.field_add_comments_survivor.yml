@@ -1,0 +1,19 @@
+uuid: 0e858045-d3d3-430d-9abd-47a684a237d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_comments_survivor
+    - node.type.issue
+id: node.issue.field_add_comments_survivor
+field_name: field_add_comments_survivor
+entity_type: node
+bundle: issue
+label: 'Additional Comments from Survivor/Complainant'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

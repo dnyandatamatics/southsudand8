@@ -1,0 +1,26 @@
+uuid: 769d5532-24e9-4c8a-8dc7-f300f6adb690
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status_of_case
+    - node.type.issue
+    - taxonomy.vocabulary.case_status
+id: node.issue.field_status_of_case
+field_name: field_status_of_case
+entity_type: node
+bundle: issue
+label: 'Status of Case'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      case_status: case_status
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

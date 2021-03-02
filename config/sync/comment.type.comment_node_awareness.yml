@@ -1,0 +1,8 @@
+uuid: ca9381e0-33e7-4ea1-b4cd-00312465a3dc
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_awareness
+label: 'Awareness comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,51 @@
+uuid: 7d2305d7-aebf-4b06-95bc-8c251922f060
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_slideshow.default
+    - field.field.node.slideshow.body
+    - field.field.node.slideshow.comment_node_slideshow
+    - field.field.node.slideshow.field_image
+    - node.type.slideshow
+  module:
+    - comment
+    - image
+    - text
+    - user
+id: node.slideshow.default
+targetEntityType: node
+bundle: slideshow
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_slideshow:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_image:
+    label: above
+    weight: 1
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

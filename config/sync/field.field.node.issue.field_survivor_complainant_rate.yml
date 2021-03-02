@@ -1,0 +1,26 @@
+uuid: 8de22ff3-a104-4d57-92ec-d86e931e743b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_survivor_complainant_rate
+    - node.type.issue
+    - taxonomy.vocabulary.satisfaction_rating
+id: node.issue.field_survivor_complainant_rate
+field_name: field_survivor_complainant_rate
+entity_type: node
+bundle: issue
+label: 'Survivor/Complainant Satisfaction with Case Feedback'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      satisfaction_rating: satisfaction_rating
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: a99703e1-87bc-4e17-8e70-d364d88b95ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_feedback_prov_agency
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_add_feedback_prov_agency
+field_name: field_add_feedback_prov_agency
+entity_type: node
+bundle: issue
+label: 'Additional Case Feedback Provided To Survivor or Complainant by Investigating Agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

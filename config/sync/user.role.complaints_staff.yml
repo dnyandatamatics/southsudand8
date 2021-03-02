@@ -1,0 +1,15 @@
+uuid: 09be2dfe-4ca5-48cf-973a-4149ee8d3a3b
+langcode: en
+status: true
+dependencies: {  }
+id: complaints_staff
+label: 'complaints staff'
+weight: 3
+is_admin: null
+permissions:
+  - 'access devel information'
+  - 'create issue content'
+  - 'delete any issue content'
+  - 'delete own issue content'
+  - 'edit any issue content'
+  - 'edit own issue content'

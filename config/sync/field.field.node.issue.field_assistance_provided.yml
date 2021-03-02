@@ -1,0 +1,26 @@
+uuid: a3753655-e7b4-4a3a-8dcb-e503a46f4a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assistance_provided
+    - node.type.issue
+    - taxonomy.vocabulary.assistance_provided
+id: node.issue.field_assistance_provided
+field_name: field_assistance_provided
+entity_type: node
+bundle: issue
+label: 'Assistance Provided'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      assistance_provided: assistance_provided
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

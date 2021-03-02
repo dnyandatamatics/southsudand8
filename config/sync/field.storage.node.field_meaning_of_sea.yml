@@ -1,0 +1,20 @@
+uuid: e50e750d-1a46-4c20-af56-f1f1aa1a32c4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_meaning_of_sea
+field_name: field_meaning_of_sea
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

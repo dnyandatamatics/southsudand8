@@ -1,0 +1,55 @@
+uuid: 5f04311d-fec0-45ce-995c-f722f042b551
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.reporting_method.field_image
+    - image.style.thumbnail
+    - taxonomy.vocabulary.reporting_method
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.reporting_method.default
+targetEntityType: taxonomy_term
+bundle: reporting_method
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    weight: 32
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

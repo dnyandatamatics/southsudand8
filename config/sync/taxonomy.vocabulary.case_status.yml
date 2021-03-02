@@ -1,0 +1,8 @@
+uuid: ea8dd4e1-c88b-46ee-b42e-f9a88f8a91da
+langcode: en
+status: true
+dependencies: {  }
+name: 'Case Status'
+vid: case_status
+description: ''
+weight: 0

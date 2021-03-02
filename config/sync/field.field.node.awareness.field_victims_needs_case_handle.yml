@@ -1,0 +1,26 @@
+uuid: bae99171-8f11-4921-9596-435ce4c3224c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_victims_needs_case_handle
+    - node.type.awareness
+    - taxonomy.vocabulary.level_of_comprehension
+id: node.awareness.field_victims_needs_case_handle
+field_name: field_victims_needs_case_handle
+entity_type: node
+bundle: awareness
+label: 'Victims’ Needs and Case-Handling'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      level_of_comprehension: level_of_comprehension
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

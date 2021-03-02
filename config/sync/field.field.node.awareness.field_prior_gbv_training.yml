@@ -1,0 +1,26 @@
+uuid: b81ca434-386f-430d-aecb-71817dc55a4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prior_gbv_training
+    - node.type.awareness
+    - taxonomy.vocabulary.yes_no
+id: node.awareness.field_prior_gbv_training
+field_name: field_prior_gbv_training
+entity_type: node
+bundle: awareness
+label: 'Prior GBV Training'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 23acf5ce-433f-4534-9326-768a581f154c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_assessment_conductor
+field_name: field_assessment_conductor
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

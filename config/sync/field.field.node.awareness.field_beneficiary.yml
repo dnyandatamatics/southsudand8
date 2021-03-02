@@ -1,0 +1,26 @@
+uuid: 9146cca1-50db-42e2-b62d-99ff499861e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beneficiary
+    - node.type.awareness
+    - taxonomy.vocabulary.beneficiary
+id: node.awareness.field_beneficiary
+field_name: field_beneficiary
+entity_type: node
+bundle: awareness
+label: Beneficiary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      beneficiary: beneficiary
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

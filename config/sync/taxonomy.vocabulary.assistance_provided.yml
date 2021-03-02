@@ -1,0 +1,8 @@
+uuid: 63090709-48cb-4145-b2a5-1225b722437b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Assistance Provided'
+vid: assistance_provided
+description: ''
+weight: 0

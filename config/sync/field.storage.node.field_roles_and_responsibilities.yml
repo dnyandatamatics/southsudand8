@@ -1,0 +1,20 @@
+uuid: ef36a565-3982-4381-86c7-9e3a1dd8ad32
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_roles_and_responsibilities
+field_name: field_roles_and_responsibilities
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

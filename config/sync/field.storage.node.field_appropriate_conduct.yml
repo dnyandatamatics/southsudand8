@@ -1,0 +1,20 @@
+uuid: e45bee6f-9359-4750-b11f-e183bc5e3a9a
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_appropriate_conduct
+field_name: field_appropriate_conduct
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 29008465-0272-471f-9f08-cc20fb5ef659
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_sector_of_accused
+    - node.type.issue
+    - taxonomy.vocabulary.work_sector
+id: node.issue.field_work_sector_of_accused
+field_name: field_work_sector_of_accused
+entity_type: node
+bundle: issue
+label: 'Work Sector of Accused'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      work_sector: work_sector
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

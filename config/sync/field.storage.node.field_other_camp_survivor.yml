@@ -1,0 +1,21 @@
+uuid: d0f3fef8-1087-4443-a0ec-859c0a96881e
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_other_camp_survivor
+field_name: field_other_camp_survivor
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

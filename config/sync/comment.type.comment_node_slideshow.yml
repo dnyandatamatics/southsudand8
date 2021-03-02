@@ -1,0 +1,8 @@
+uuid: 1dfc7747-1ab6-4e0d-946e-9a253c9a43c9
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_slideshow
+label: 'Slideshow comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,19 @@
+uuid: 1bd36e26-edfa-4758-bc97-06e7a75221d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referral_agency_other
+    - node.type.issue
+id: node.issue.field_referral_agency_other
+field_name: field_referral_agency_other
+entity_type: node
+bundle: issue
+label: 'If other, please identify the agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

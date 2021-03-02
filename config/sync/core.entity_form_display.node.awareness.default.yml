@@ -1,0 +1,329 @@
+uuid: 6e289498-cbb7-42d6-a71a-764735f2bc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.awareness.comment_node_awareness
+    - field.field.node.awareness.field_age_group
+    - field.field.node.awareness.field_appropriate_conduct
+    - field.field.node.awareness.field_assessment_conductor
+    - field.field.node.awareness.field_assessment_method
+    - field.field.node.awareness.field_beneficiary
+    - field.field.node.awareness.field_beneficiary_agency
+    - field.field.node.awareness.field_camp_of_survivor
+    - field.field.node.awareness.field_case_reporting
+    - field.field.node.awareness.field_date_recorded
+    - field.field.node.awareness.field_how_to_file_a_complaint
+    - field.field.node.awareness.field_meaning_of_sea
+    - field.field.node.awareness.field_method_of_comprehension
+    - field.field.node.awareness.field_method_of_contact
+    - field.field.node.awareness.field_other_assessment_conductor
+    - field.field.node.awareness.field_other_beneficiary
+    - field.field.node.awareness.field_other_camp_survivor
+    - field.field.node.awareness.field_other_method_comprehension
+    - field.field.node.awareness.field_other_source_sea_info
+    - field.field.node.awareness.field_prior_gbv_training
+    - field.field.node.awareness.field_prior_gbv_training_dates
+    - field.field.node.awareness.field_prior_psea_training
+    - field.field.node.awareness.field_prior_psea_training_dates
+    - field.field.node.awareness.field_refugee_rights_sea
+    - field.field.node.awareness.field_risk_sea
+    - field.field.node.awareness.field_roles_and_responsibilities
+    - field.field.node.awareness.field_sex
+    - field.field.node.awareness.field_source_of_sea_information
+    - field.field.node.awareness.field_special_needs_of_children
+    - field.field.node.awareness.field_victims_needs_case_handle
+    - field.field.node.awareness.field_vulnerability_factors
+    - field.field.node.awareness.field_work_sector_of_accused
+    - node.type.awareness
+  module:
+    - comment
+    - datetime
+    - field_group
+    - path
+third_party_settings:
+  field_group:
+    group_comprehension:
+      children:
+        - field_meaning_of_sea
+        - field_risk_sea
+        - field_refugee_rights_sea
+        - field_case_reporting
+        - field_how_to_file_a_complaint
+        - field_appropriate_conduct
+        - field_victims_needs_case_handle
+        - field_special_needs_of_children
+        - field_roles_and_responsibilities
+      parent_name: ''
+      weight: 25
+      label: 'Level of Comprehension'
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: 'group-comprehension field-group-fieldset'
+        required_fields: true
+      format_type: fieldset
+      region: content
+id: node.awareness.default
+targetEntityType: node
+bundle: awareness
+mode: default
+content:
+  comment_node_awareness:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_age_group:
+    weight: 9
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_appropriate_conduct:
+    weight: 64
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_assessment_conductor:
+    weight: 16
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_assessment_method:
+    weight: 7
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_beneficiary:
+    weight: 4
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_beneficiary_agency:
+    weight: 8
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_camp_of_survivor:
+    weight: 11
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_case_reporting:
+    weight: 62
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date_recorded:
+    weight: 3
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_how_to_file_a_complaint:
+    weight: 63
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_meaning_of_sea:
+    weight: 59
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_method_of_comprehension:
+    weight: 14
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_method_of_contact:
+    weight: 6
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_other_assessment_conductor:
+    weight: 17
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_beneficiary:
+    weight: 5
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_camp_survivor:
+    weight: 12
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_method_comprehension:
+    weight: 15
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_source_sea_info:
+    weight: 19
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_prior_gbv_training:
+    weight: 23
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_prior_gbv_training_dates:
+    weight: 24
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_prior_psea_training:
+    weight: 21
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_prior_psea_training_dates:
+    weight: 22
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_refugee_rights_sea:
+    weight: 61
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_risk_sea:
+    weight: 60
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_roles_and_responsibilities:
+    weight: 67
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sex:
+    weight: 10
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_source_of_sea_information:
+    weight: 18
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_special_needs_of_children:
+    weight: 66
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_victims_needs_case_handle:
+    weight: 65
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_vulnerability_factors:
+    weight: 13
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_work_sector_of_accused:
+    weight: 20
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

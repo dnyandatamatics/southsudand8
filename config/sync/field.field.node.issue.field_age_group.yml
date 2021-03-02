@@ -1,0 +1,26 @@
+uuid: e2f80bb8-7253-4708-b6bc-82a5fc5cb9b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age_group
+    - node.type.issue
+    - taxonomy.vocabulary.age_group
+id: node.issue.field_age_group
+field_name: field_age_group
+entity_type: node
+bundle: issue
+label: Age
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      age_group: age_group
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

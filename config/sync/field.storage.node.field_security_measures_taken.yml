@@ -1,0 +1,19 @@
+uuid: 0cefa71f-5c74-44ca-bcc5-1418900c0b86
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_security_measures_taken
+field_name: field_security_measures_taken
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
