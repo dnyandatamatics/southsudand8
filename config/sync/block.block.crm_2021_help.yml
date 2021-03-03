@@ -1,0 +1,22 @@
+uuid: 41f1699c-55d1-420c-9a62-c7d2c15a2769
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - crm_2021
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: crm_2021_help
+theme: crm_2021
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

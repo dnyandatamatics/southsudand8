@@ -1,0 +1,29 @@
+name: Bootstrap crm_2021 Subtheme
+type: theme
+description: 'Basic structure for a Bootstrap Barrio SubTheme.'
+core_version_requirement: ^8 || ^9
+base theme: bootstrap_barrio
+
+libraries:
+  - crm_2021/bootstrap_cdn
+  - crm_2021/global-styling
+
+regions:
+  pagetop: 'Top header'
+  pagebottom: 'Page bottom'
+
+  navigation: 'Navigation'
+  header: 'Header reserve'
+  header2: 'Header Two'
+  banner: 'Banner Full'
+  help: 'Help'
+  prepro: 'Prepro'
+  content: 'Content'
+  postfix: 'Postfix'
+  extra: 'Content extra'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  footer1: 'Footer First'
+  footer2 : 'Footer Second'
+

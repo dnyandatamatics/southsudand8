@@ -1,0 +1,20 @@
+uuid: 94825b3e-57df-4155-9c8c-d4902d88c404
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_user_login
+theme: bootstrap_barrio
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility: {  }

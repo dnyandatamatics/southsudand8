@@ -1,0 +1,25 @@
+uuid: 60c529e6-f6f2-4d98-83c0-4a10a44d9284
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6f74faae-7597-4334-9dc8-b5b936dba395'
+  module:
+    - block_content
+  theme:
+    - crm_2021
+id: crm_2021_crm_block_1
+theme: crm_2021
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+settings:
+  id: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

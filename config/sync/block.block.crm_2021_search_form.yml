@@ -1,0 +1,23 @@
+uuid: 8e6445b8-de7a-41d4-994a-3146a1b0866b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - crm_2021
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: crm_2021_search_form
+theme: crm_2021
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }
