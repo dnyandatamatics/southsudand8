@@ -1,0 +1,22 @@
+uuid: 18e41f71-5402-44e0-b55d-035307f54f3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crm_2021
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: crm_2021_crm_system_main
+theme: crm_2021
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

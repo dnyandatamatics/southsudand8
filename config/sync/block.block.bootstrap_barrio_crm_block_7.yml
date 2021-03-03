@@ -1,0 +1,30 @@
+uuid: ab552b1c-5ab4-4336-b2e6-8a500fabed5b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9e6caab2-31ad-4595-9714-f64793864d50'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_crm_block_7
+theme: bootstrap_barrio
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:9e6caab2-31ad-4595-9714-f64793864d50'
+settings:
+  id: 'block_content:9e6caab2-31ad-4595-9714-f64793864d50'
+  label: 'PSEA Awareness-raising'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /awareness-raising

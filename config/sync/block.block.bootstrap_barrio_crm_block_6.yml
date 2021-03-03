@@ -1,0 +1,30 @@
+uuid: 47817359-80ed-4dce-80b6-3a7e005cd0e4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_crm_block_6
+theme: bootstrap_barrio
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
+settings:
+  id: 'block_content:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact-us

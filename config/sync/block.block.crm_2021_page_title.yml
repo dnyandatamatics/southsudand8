@@ -1,0 +1,20 @@
+uuid: abc0b3b7-515b-4be0-882f-b63662209dad
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crm_2021
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: crm_2021_page_title
+theme: crm_2021
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

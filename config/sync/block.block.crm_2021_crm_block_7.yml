@@ -1,0 +1,30 @@
+uuid: 1f335232-8505-4cd0-9897-1e8a9b6e3540
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9e6caab2-31ad-4595-9714-f64793864d50'
+  module:
+    - block_content
+    - system
+  theme:
+    - crm_2021
+id: crm_2021_crm_block_7
+theme: crm_2021
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:9e6caab2-31ad-4595-9714-f64793864d50'
+settings:
+  id: 'block_content:9e6caab2-31ad-4595-9714-f64793864d50'
+  label: 'PSEA Awareness-raising'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /awareness-raising
