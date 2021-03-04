@@ -44,8 +44,10 @@ function crm_2021_preprocess_page(array &$variables) {
 
   // logo needs to be placed within specified folder
   
-  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
- //$variables['logopath'] = str_replace('.svg', '.png', $variables['logo']);
+  $variables['logopath']  = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+  $variables['logopath']  = str_replace('.svg', '.png', $variables['logopath']);
+  $variables['theme_path']= \Drupal::service('theme.manager')->getActiveTheme()->getPath();
+
 
   
 }
