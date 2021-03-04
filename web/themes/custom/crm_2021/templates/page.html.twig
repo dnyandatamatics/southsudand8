@@ -92,11 +92,11 @@
         <a class="name" href="#" title="{% trans %}Home {% endtrans %}"></a>
      {% endif %}
 
-       {% if site_slogan %}
-        <div class="slogan">{{ site_slogan }}</div>
-    {% endif %}
+        {% if site_slogan %}
+            <div class="slogan">{{ site_slogan }}</div>
+        {% endif %}
     
-      {% page.header2 %}
+      {{  page.header2 }}
 
       <div id="navbar" class="navbar navbar-static-top navbar-default">
 
@@ -115,6 +115,7 @@
 </header>
 
 {# <?php print $messages; ?> #}
+
 {% if page.banner %}
 
   <div class="highlights">
@@ -210,21 +211,20 @@
     {% if page.footer1 or page.footer2  %}
 
       <div class="row">
-       {{ page.page.footer1 }}
-        {{ page.page.footer2 }}
+       {{ page.footer1 }}
+        {{ page.footer2 }}
         <div class="pull-right">
-
           <img src="/sites/default/files/field/image/UNCT_SouthSudan_logo_HR3.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src="/sites/all/themes/crm/images/iomlogo.png" />
-          <img src="/sites/all/themes/crm/images/imclogo.png" />-->
-          <img src="/sites/all/themes/crm/images/hacplogo.png" />
-          <img src="/sites/all/themes/crm/images/doslogo.png" />
+          <img src="{{ theme_path }}/images/iomlogo.png" />
+          <img src="{{ theme_path }}/images/imclogo.png" />
+          <img src="{{ theme_path }}/images/hacplogo.png" />
+          <img src="{{ theme_path }}/images/doslogo.png" />
         </div>
       </div>
  {% endif %}
     {% if page.footer %}
       <div class="row">
-       {% page.footer %}
+       {{  page.footer }}
       </div>
     {% endif %}
   </div>
