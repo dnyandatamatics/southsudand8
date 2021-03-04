@@ -11,13 +11,13 @@ dependencies:
     - crm_2021
 id: crm_2021_crm_block_4
 theme: crm_2021
-region: content
-weight: 0
+region: banner
+weight: -7
 provider: null
 plugin: 'block_content:1229dd37-4d4e-4032-9ab5-cd9059e480df'
 settings:
   id: 'block_content:1229dd37-4d4e-4032-9ab5-cd9059e480df'
-  label: ''
+  label: 'Home Page Banner'
   provider: block_content
   label_display: '0'
   status: true
@@ -28,3 +28,4 @@ visibility:
     id: request_path
     negate: false
     pages: '<front>'
+    context_mapping: {  }

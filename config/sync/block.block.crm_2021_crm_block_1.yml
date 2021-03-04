@@ -10,8 +10,8 @@ dependencies:
     - crm_2021
 id: crm_2021_crm_block_1
 theme: crm_2021
-region: content
-weight: 0
+region: footer1
+weight: -9
 provider: null
 plugin: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
 settings:
