@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
 settings:
   id: 'block_content:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
-  label: ''
+  label: 'Contact us info'
   provider: block_content
   label_display: '0'
   status: true
@@ -28,3 +28,4 @@ visibility:
     id: request_path
     negate: false
     pages: /contact-us
+    context_mapping: {  }
