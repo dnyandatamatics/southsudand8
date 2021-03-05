@@ -89,7 +89,7 @@
     </div>
     <div id="header2" class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
      {% if site_name %}
-        <a class="name" href="#" title="{% trans %}Home {% endtrans %}"></a>
+        <a class="name" href="#" title="{% trans %}Home {% endtrans %}">{{ site_name }}</a>
      {% endif %}
 
         {% if site_slogan %}
@@ -141,15 +141,17 @@
 
 
 <div class="main-container">
-<div class=" container">
+ <div class=" container">
   <div class="row">
+  
      {#<?php if (!empty($title)): ?>
       <div class="headers">
         <div class="container">
-          <h1 class="page-header">{#<?php print $title; ?>#}</h1>
+          <h1 class="page-header"><?php print $title; ?></h1>
         </div>
-      </div>
-    {# <?php endif; ?>#}
+         </div>
+     <?php endif; ?>
+     #}
   {% if page.header %}
     <div class="headers">
         <div class="container">
@@ -211,15 +213,18 @@
     {% if page.footer1 or page.footer2  %}
 
       <div class="row">
-       {{ page.footer1 }}
-        {{ page.footer2 }}
-        <div class="pull-right">
-          <img src="/sites/default/files/field/image/UNCT_SouthSudan_logo_HR3.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src="{{ theme_path }}/images/iomlogo.png" />
-          <img src="{{ theme_path }}/images/imclogo.png" />
-          <img src="{{ theme_path }}/images/hacplogo.png" />
-          <img src="{{ theme_path }}/images/doslogo.png" />
-        </div>
+      <div class="col-md-6">{{ page.footer1 }} {{ page.footer2 }}</div>
+       <div class="col-md-6">
+           <div class="pull-right">
+              <img src="/sites/default/files/field/image/UNCT_SouthSudan_logo_HR3.jpg" />
+              <img src="{{ theme_path }}/images/iomlogo.png" />
+              <img src="{{ theme_path }}/images/imclogo.png" />
+              <img src="{{ theme_path }}/images/hacplogo.png" />
+              <img src="{{ theme_path }}/images/doslogo.png" />
+            </div>
+       </div>
+        
+        
       </div>
  {% endif %}
     {% if page.footer %}
