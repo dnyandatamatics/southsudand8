@@ -1,0 +1,20 @@
+uuid: 71e1586d-2885-4581-83fc-bbbcdd8bee43
+langcode: en
+status: true
+dependencies:
+  module:
+    - masquerade
+  theme:
+    - crm_2021
+id: masquerade
+theme: crm_2021
+region: footer1
+weight: -9
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  provider: masquerade
+  label_display: visible
+visibility: {  }

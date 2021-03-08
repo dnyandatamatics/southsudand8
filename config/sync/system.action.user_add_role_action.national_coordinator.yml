@@ -1,0 +1,14 @@
+uuid: 628593f8-109c-412d-a161-d6bbbd2eefde
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.national_coordinator
+  module:
+    - user
+id: user_add_role_action.national_coordinator
+label: 'Add the national coordinator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: national_coordinator

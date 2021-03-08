@@ -1,0 +1,19 @@
+uuid: f0c2770d-6d0d-4922-aa4a-20d0891def2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_if_ngo_provide_ngo_name
+    - node.type.awareness
+id: node.awareness.field_if_ngo_provide_ngo_name
+field_name: field_if_ngo_provide_ngo_name
+entity_type: node
+bundle: awareness
+label: 'If NGO is selected. Please identify the NGO'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

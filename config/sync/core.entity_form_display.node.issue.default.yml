@@ -1,4 +1,4 @@
-uuid: b2ab1487-d68f-4607-a34c-1281ba29035a
+uuid: 7bf0b7ec-2af2-4648-b4d9-aa55e9610bca
 langcode: en
 status: true
 dependencies:
@@ -11,14 +11,17 @@ dependencies:
     - field.field.node.issue.field_address_of_accused
     - field.field.node.issue.field_age
     - field.field.node.issue.field_age_group
+    - field.field.node.issue.field_agency_acknowledge_receipt
     - field.field.node.issue.field_agency_allegation_referred
+    - field.field.node.issue.field_agency_notified_yesno
     - field.field.node.issue.field_agency_of_accused
     - field.field.node.issue.field_agency_receipt_allegation
     - field.field.node.issue.field_agency_responsible_secure
+    - field.field.node.issue.field_assistance_already_provide
     - field.field.node.issue.field_assistance_provided
     - field.field.node.issue.field_camp_of_survivor
     - field.field.node.issue.field_case_outcome
-    - field.field.node.issue.field_complainant_satisfaction
+    - field.field.node.issue.field_complaint_referred
     - field.field.node.issue.field_contact_details
     - field.field.node.issue.field_date_agency_rec_allegation
     - field.field.node.issue.field_date_and_time_of_incident
@@ -29,7 +32,6 @@ dependencies:
     - field.field.node.issue.field_date_recorded
     - field.field.node.issue.field_date_referred_investigate
     - field.field.node.issue.field_date_time_referred
-    - field.field.node.issue.field_ethnic_origin_nationality
     - field.field.node.issue.field_feedback_provided_agency
     - field.field.node.issue.field_feedback_provided_cbcm
     - field.field.node.issue.field_feedback_provided_txt_cbcm
@@ -44,29 +46,37 @@ dependencies:
     - field.field.node.issue.field_name_of_accused_person
     - field.field.node.issue.field_name_of_complainant
     - field.field.node.issue.field_name_of_survivor
+    - field.field.node.issue.field_nationality
     - field.field.node.issue.field_non_sea_complaint
     - field.field.node.issue.field_other_agency_safety_plan
     - field.field.node.issue.field_other_camp_survivor
-    - field.field.node.issue.field_other_vulnerability_factor
     - field.field.node.issue.field_parent_details
     - field.field.node.issue.field_physical_desc_accused
-    - field.field.node.issue.field_priority_level
     - field.field.node.issue.field_referral_agency
     - field.field.node.issue.field_referral_agency_other
     - field.field.node.issue.field_relevant_dates_of_issue
+    - field.field.node.issue.field_report_response
     - field.field.node.issue.field_reporting_method
     - field.field.node.issue.field_required_security_measures
     - field.field.node.issue.field_security_measures_taken
+    - field.field.node.issue.field_service_provided_yes
+    - field.field.node.issue.field_service_requested_yes
     - field.field.node.issue.field_sex
+    - field.field.node.issue.field_sex_complainant
     - field.field.node.issue.field_sex_of_accused
     - field.field.node.issue.field_status_of_case
-    - field.field.node.issue.field_survivor_complainant_rate
     - field.field.node.issue.field_survivor_consent_form_comp
+    - field.field.node.issue.field_survivor_feedback_yesno
     - field.field.node.issue.field_survivor_informed_services
-    - field.field.node.issue.field_survivor_satisfaction
-    - field.field.node.issue.field_vulnerability_factors
+    - field.field.node.issue.field_survivor_nationality
+    - field.field.node.issue.field_survivor_requested_assista
+    - field.field.node.issue.field_type_of_report
+    - field.field.node.issue.field_when_agency_notified_yes
+    - field.field.node.issue.field_where_complainant_reported
     - field.field.node.issue.field_witness
     - field.field.node.issue.field_work_sector_of_accused
+    - field.field.node.issue.field_year_birth_survivor
+    - field.field.node.issue.field_year_of_birth
     - node.type.issue
   module:
     - comment
@@ -79,13 +89,9 @@ third_party_settings:
       children:
         - field_date_recorded
         - field_date_complaint_received
-        - field_priority_level
         - field_non_sea_complaint
-        - field_name_of_complainant
-        - field_contact_details
-        - field_reporting_method
       parent_name: ''
-      weight: 3
+      weight: 8
       label: 'General Information'
       format_settings:
         formatter: collapsible
@@ -103,18 +109,19 @@ third_party_settings:
         - field_age_group
         - field_sex
         - field_parent_details
-        - field_vulnerability_factors
-        - field_other_vulnerability_factor
-        - field_ethnic_origin_nationality
         - field_other_camp_survivor
+        - field_year_birth_survivor
+        - field_survivor_nationality
       parent_name: ''
-      weight: 4
-      label: 'Survivor Details'
+      weight: 10
+      label: 'Survivor Credentials'
       format_settings:
+        label: 'Survivor Credentials'
         formatter: collapsible
-        description: ''
-        classes: 'group-survivor-details field-group-fieldset'
         required_fields: true
+        id: ''
+        classes: 'group-survivor-details field-group-fieldset'
+        description: ''
       format_type: fieldset
       region: content
     group_incident_details:
@@ -125,13 +132,15 @@ third_party_settings:
         - field_witness
         - field_relevant_dates_of_issue
       parent_name: ''
-      weight: 5
-      label: 'Incident Details'
+      weight: 11
+      label: 'Details of Incident'
       format_settings:
+        label: 'Details of Incident'
         formatter: collapsible
-        description: ''
-        classes: 'group-incident-details field-group-fieldset'
         required_fields: true
+        id: ''
+        classes: 'group-incident-details field-group-fieldset'
+        description: ''
       format_type: fieldset
       region: content
     group_accused:
@@ -146,13 +155,15 @@ third_party_settings:
         - field_sex_of_accused
         - field_physical_desc_accused
       parent_name: ''
-      weight: 6
-      label: 'Subject of the Complaint (the accused)'
+      weight: 12
+      label: 'Offender’s Credentials'
       format_settings:
+        label: 'Offender’s Credentials'
         formatter: collapsible
-        description: ''
-        classes: 'group-accused field-group-fieldset'
         required_fields: true
+        id: ''
+        classes: 'group-accused field-group-fieldset'
+        description: ''
       format_type: fieldset
       region: content
     group_security:
@@ -162,7 +173,7 @@ third_party_settings:
         - field_agency_responsible_secure
         - field_other_agency_safety_plan
       parent_name: ''
-      weight: 7
+      weight: 13
       label: 'Security / Safety'
       format_settings:
         formatter: collapsible
@@ -176,7 +187,7 @@ third_party_settings:
         - group_referral_victim_assistance
         - group_allegation_referral
       parent_name: ''
-      weight: 8
+      weight: 14
       label: 'Referral Details'
       format_settings:
         formatter: collapsible
@@ -191,13 +202,15 @@ third_party_settings:
         - field_case_outcome
         - field_date_of_case_resolution
       parent_name: ''
-      weight: 67
-      label: 'Case Status'
+      weight: 15
+      label: 'Case Status – For Co-Chairs'
       format_settings:
+        label: 'Case Status – For Co-Chairs'
         formatter: collapsible
-        description: ''
-        classes: 'group-case-status field-group-fieldset'
         required_fields: true
+        id: ''
+        classes: 'group-case-status field-group-fieldset'
+        description: ''
       format_type: fieldset
       region: content
     group_feedback:
@@ -211,18 +224,20 @@ third_party_settings:
         - field_feedback_provided_cbcm
         - field_date_feedback_prov_cbcm
         - field_feedback_provided_txt_cbcm
-        - field_complainant_satisfaction
-        - field_survivor_satisfaction
-        - field_survivor_complainant_rate
         - field_add_comments_survivor
+        - field_survivor_feedback_yesno
+        - field_agency_notified_yesno
+        - field_when_agency_notified_yes
       parent_name: ''
-      weight: 70
-      label: 'Feedback / Satisfaction'
+      weight: 16
+      label: Feedback
       format_settings:
+        label: Feedback
         formatter: collapsible
-        description: ''
-        classes: 'group-feedback field-group-fieldset'
         required_fields: true
+        id: ''
+        classes: 'group-feedback field-group-fieldset'
+        description: ''
       format_type: fieldset
       region: content
     group_referral_victim_assistance:
@@ -232,14 +247,20 @@ third_party_settings:
         - field_referral_agency
         - field_date_time_referred
         - field_referral_agency_other
+        - field_survivor_requested_assista
+        - field_service_requested_yes
+        - field_assistance_already_provide
+        - field_service_provided_yes
       parent_name: group_referral
-      weight: 70
-      label: 'Referral for Victim Assistance'
+      weight: 71
+      label: 'Referral for Survivor Assistance'
       format_settings:
+        label: 'Referral for Survivor Assistance'
         formatter: collapsible
-        description: ''
-        classes: 'group-referral-victim-assistance field-group-fieldset'
         required_fields: true
+        id: ''
+        classes: 'group-referral-victim-assistance field-group-fieldset'
+        description: ''
       format_type: fieldset
       region: content
     group_allegation_referral:
@@ -250,14 +271,38 @@ third_party_settings:
         - field_date_agency_rec_allegation
         - field_follow_up_cbcm
         - field_information_required
+        - field_complaint_referred
+        - field_agency_acknowledge_receipt
       parent_name: group_referral
-      weight: 71
-      label: 'Allegation Referral'
+      weight: 72
+      label: 'Allegation Referral – For Co-Chairs '
+      format_settings:
+        label: 'Allegation Referral – For Co-Chairs '
+        formatter: collapsible
+        required_fields: true
+        id: ''
+        classes: 'group-allegation-referral field-group-fieldset'
+        description: ''
+      format_type: fieldset
+      region: content
+    group_complainant_credentials:
+      children:
+        - field_name_of_complainant
+        - field_contact_details
+        - field_reporting_method
+        - field_nationality
+        - field_year_of_birth
+        - field_sex_complainant
+        - field_where_complainant_reported
+      parent_name: ''
+      weight: 9
+      label: 'Complainant Credentials'
       format_settings:
         formatter: collapsible
         description: ''
-        classes: 'group-allegation-referral field-group-fieldset'
+        classes: 'group-complainant-credentials field-group-fieldset'
         required_fields: true
+        id: ''
       format_type: fieldset
       region: content
 id: node.issue.default
@@ -278,7 +323,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_add_comments_survivor:
-    weight: 85
+    weight: 105
     type: string_textarea
     settings:
       rows: 5
@@ -286,19 +331,19 @@ content:
     third_party_settings: {  }
     region: content
   field_add_date_feedback_provided:
-    weight: 77
+    weight: 100
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_add_feedback_prov_agency:
-    weight: 76
+    weight: 99
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_add_feedback_provided:
-    weight: 78
+    weight: 101
     type: string_textarea
     settings:
       rows: 5
@@ -306,7 +351,7 @@ content:
     third_party_settings: {  }
     region: content
   field_address_of_accused:
-    weight: 55
+    weight: 56
     type: string_textarea
     settings:
       rows: 5
@@ -314,20 +359,32 @@ content:
     third_party_settings: {  }
     region: content
   field_age:
-    weight: 56
+    weight: 57
     type: number
     settings:
       placeholder: ''
     third_party_settings: {  }
     region: content
   field_age_group:
-    weight: 42
+    weight: 59
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_agency_acknowledge_receipt:
+    weight: 12
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_agency_allegation_referred:
-    weight: 68
+    weight: 14
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_agency_notified_yesno:
+    weight: 106
     type: options_select
     settings: {  }
     third_party_settings: {  }
@@ -339,45 +396,51 @@ content:
     third_party_settings: {  }
     region: content
   field_agency_receipt_allegation:
-    weight: 69
+    weight: 15
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_agency_responsible_secure:
-    weight: 61
+    weight: 62
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_assistance_already_provide:
+    weight: 56
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_assistance_provided:
-    weight: 67
+    weight: 62
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_camp_of_survivor:
-    weight: 39
+    weight: 56
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_case_outcome:
-    weight: 67
+    weight: 112
     type: string_textarea
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_complainant_satisfaction:
-    weight: 82
+  field_complaint_referred:
+    weight: 11
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_contact_details:
-    weight: 37
+    weight: 7
     type: string_textfield
     settings:
       size: 60
@@ -385,13 +448,13 @@ content:
     third_party_settings: {  }
     region: content
   field_date_agency_rec_allegation:
-    weight: 70
+    weight: 16
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_date_and_time_of_incident:
-    weight: 46
+    weight: 52
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
@@ -403,19 +466,19 @@ content:
     third_party_settings: {  }
     region: content
   field_date_feedback_prov_agency:
-    weight: 74
+    weight: 97
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_date_feedback_prov_cbcm:
-    weight: 80
+    weight: 103
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_date_of_case_resolution:
-    weight: 66
+    weight: 110
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
@@ -427,39 +490,31 @@ content:
     third_party_settings: {  }
     region: content
   field_date_referred_investigate:
-    weight: 67
+    weight: 13
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_date_time_referred:
-    weight: 64
+    weight: 58
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_ethnic_origin_nationality:
-    weight: 45
-    type: string_textfield
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   field_feedback_provided_agency:
-    weight: 73
+    weight: 95
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_feedback_provided_cbcm:
-    weight: 79
+    weight: 102
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_feedback_provided_txt_cbcm:
-    weight: 81
+    weight: 104
     type: string_textarea
     settings:
       rows: 5
@@ -467,7 +522,7 @@ content:
     third_party_settings: {  }
     region: content
   field_feedback_that_was_provided:
-    weight: 75
+    weight: 98
     type: string_textarea
     settings:
       rows: 5
@@ -475,13 +530,13 @@ content:
     third_party_settings: {  }
     region: content
   field_follow_up_cbcm:
-    weight: 71
+    weight: 17
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_identity_number:
-    weight: 38
+    weight: 55
     type: string_textfield
     settings:
       size: 60
@@ -489,7 +544,7 @@ content:
     third_party_settings: {  }
     region: content
   field_if_other_accused_agency:
-    weight: 52
+    weight: 53
     type: string_textfield
     settings:
       size: 60
@@ -497,7 +552,7 @@ content:
     third_party_settings: {  }
     region: content
   field_incident_description:
-    weight: 49
+    weight: 56
     type: string_textarea
     settings:
       rows: 5
@@ -505,7 +560,7 @@ content:
     third_party_settings: {  }
     region: content
   field_information_required:
-    weight: 72
+    weight: 18
     type: string_textarea
     settings:
       rows: 5
@@ -513,7 +568,7 @@ content:
     third_party_settings: {  }
     region: content
   field_job_title_of_accused:
-    weight: 54
+    weight: 55
     type: string_textfield
     settings:
       size: 60
@@ -521,7 +576,7 @@ content:
     third_party_settings: {  }
     region: content
   field_location_of_incident:
-    weight: 48
+    weight: 55
     type: options_select
     settings: {  }
     third_party_settings: {  }
@@ -535,7 +590,7 @@ content:
     third_party_settings: {  }
     region: content
   field_name_of_complainant:
-    weight: 36
+    weight: 6
     type: string_textfield
     settings:
       size: 60
@@ -543,21 +598,27 @@ content:
     third_party_settings: {  }
     region: content
   field_name_of_survivor:
-    weight: 37
+    weight: 54
     type: string_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_nationality:
+    weight: 8
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_non_sea_complaint:
-    weight: 35
+    weight: 33
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_other_agency_safety_plan:
-    weight: 62
+    weight: 63
     type: string_textfield
     settings:
       size: 60
@@ -565,15 +626,7 @@ content:
     third_party_settings: {  }
     region: content
   field_other_camp_survivor:
-    weight: 40
-    type: string_textfield
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
-  field_other_vulnerability_factor:
-    weight: 47
+    weight: 57
     type: string_textfield
     settings:
       size: 60
@@ -581,7 +634,7 @@ content:
     third_party_settings: {  }
     region: content
   field_parent_details:
-    weight: 44
+    weight: 62
     type: string_textarea
     settings:
       rows: 5
@@ -589,27 +642,21 @@ content:
     third_party_settings: {  }
     region: content
   field_physical_desc_accused:
-    weight: 58
+    weight: 59
     type: string_textarea
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_priority_level:
-    weight: 33
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_referral_agency:
-    weight: 65
+    weight: 60
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_referral_agency_other:
-    weight: 66
+    weight: 61
     type: string_textfield
     settings:
       size: 60
@@ -617,83 +664,125 @@ content:
     third_party_settings: {  }
     region: content
   field_relevant_dates_of_issue:
-    weight: 47
+    weight: 54
     type: string_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_report_response:
+    weight: 6
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_reporting_method:
-    weight: 34
+    weight: 13
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_required_security_measures:
-    weight: 59
+    weight: 60
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_security_measures_taken:
-    weight: 60
+    weight: 61
     type: string_textarea
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_service_provided_yes:
+    weight: 57
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_service_requested_yes:
+    weight: 55
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_sex:
-    weight: 43
+    weight: 61
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_sex_complainant:
+    weight: 10
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_sex_of_accused:
-    weight: 57
+    weight: 58
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_status_of_case:
-    weight: 65
+    weight: 109
     type: options_buttons
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_survivor_complainant_rate:
-    weight: 84
-    type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_survivor_consent_form_comp:
-    weight: 41
+    weight: 58
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_survivor_feedback_yesno:
+    weight: 94
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_survivor_informed_services:
+    weight: 53
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_survivor_nationality:
     weight: 63
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_survivor_satisfaction:
-    weight: 83
+  field_survivor_requested_assista:
+    weight: 54
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_vulnerability_factors:
-    weight: 46
-    type: options_buttons
+  field_type_of_report:
+    weight: 3
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_when_agency_notified_yes:
+    weight: 107
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_where_complainant_reported:
+    weight: 11
+    type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_witness:
-    weight: 50
+    weight: 57
     type: string_textarea
     settings:
       rows: 5
@@ -701,8 +790,20 @@ content:
     third_party_settings: {  }
     region: content
   field_work_sector_of_accused:
-    weight: 53
+    weight: 54
     type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_year_birth_survivor:
+    weight: 60
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_year_of_birth:
+    weight: 9
+    type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content

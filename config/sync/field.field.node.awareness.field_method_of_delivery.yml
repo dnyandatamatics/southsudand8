@@ -1,0 +1,26 @@
+uuid: 4ab43b36-8aa8-47e0-a3b4-2011ce2a36dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_method_of_delivery
+    - node.type.awareness
+    - taxonomy.vocabulary.method_of_delivery
+id: node.awareness.field_method_of_delivery
+field_name: field_method_of_delivery
+entity_type: node
+bundle: awareness
+label: 'Method of delivery'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      method_of_delivery: method_of_delivery
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

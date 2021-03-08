@@ -1,0 +1,8 @@
+uuid: b8231fe0-dd9f-434e-b037-e890f0ed0b74
+langcode: en
+status: true
+dependencies: {  }
+name: 'Method of delivery'
+vid: method_of_delivery
+description: ''
+weight: 0

@@ -1,6 +1,6 @@
-uuid: 3be57151-8118-4b50-9aec-47c08eafe9a5
+uuid: 20143515-5b10-4720-8755-b7f8f7b32344
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.comments_recent

@@ -1,4 +1,4 @@
-uuid: 6ca0e26f-64b3-418a-b546-dee55961479d
+uuid: f943cef0-7764-41c7-8189-decb210a91fc
 langcode: en
 status: true
 dependencies:
@@ -12,14 +12,17 @@ dependencies:
     - field.field.node.issue.field_address_of_accused
     - field.field.node.issue.field_age
     - field.field.node.issue.field_age_group
+    - field.field.node.issue.field_agency_acknowledge_receipt
     - field.field.node.issue.field_agency_allegation_referred
+    - field.field.node.issue.field_agency_notified_yesno
     - field.field.node.issue.field_agency_of_accused
     - field.field.node.issue.field_agency_receipt_allegation
     - field.field.node.issue.field_agency_responsible_secure
+    - field.field.node.issue.field_assistance_already_provide
     - field.field.node.issue.field_assistance_provided
     - field.field.node.issue.field_camp_of_survivor
     - field.field.node.issue.field_case_outcome
-    - field.field.node.issue.field_complainant_satisfaction
+    - field.field.node.issue.field_complaint_referred
     - field.field.node.issue.field_contact_details
     - field.field.node.issue.field_date_agency_rec_allegation
     - field.field.node.issue.field_date_and_time_of_incident
@@ -30,7 +33,6 @@ dependencies:
     - field.field.node.issue.field_date_recorded
     - field.field.node.issue.field_date_referred_investigate
     - field.field.node.issue.field_date_time_referred
-    - field.field.node.issue.field_ethnic_origin_nationality
     - field.field.node.issue.field_feedback_provided_agency
     - field.field.node.issue.field_feedback_provided_cbcm
     - field.field.node.issue.field_feedback_provided_txt_cbcm
@@ -45,29 +47,37 @@ dependencies:
     - field.field.node.issue.field_name_of_accused_person
     - field.field.node.issue.field_name_of_complainant
     - field.field.node.issue.field_name_of_survivor
+    - field.field.node.issue.field_nationality
     - field.field.node.issue.field_non_sea_complaint
     - field.field.node.issue.field_other_agency_safety_plan
     - field.field.node.issue.field_other_camp_survivor
-    - field.field.node.issue.field_other_vulnerability_factor
     - field.field.node.issue.field_parent_details
     - field.field.node.issue.field_physical_desc_accused
-    - field.field.node.issue.field_priority_level
     - field.field.node.issue.field_referral_agency
     - field.field.node.issue.field_referral_agency_other
     - field.field.node.issue.field_relevant_dates_of_issue
+    - field.field.node.issue.field_report_response
     - field.field.node.issue.field_reporting_method
     - field.field.node.issue.field_required_security_measures
     - field.field.node.issue.field_security_measures_taken
+    - field.field.node.issue.field_service_provided_yes
+    - field.field.node.issue.field_service_requested_yes
     - field.field.node.issue.field_sex
+    - field.field.node.issue.field_sex_complainant
     - field.field.node.issue.field_sex_of_accused
     - field.field.node.issue.field_status_of_case
-    - field.field.node.issue.field_survivor_complainant_rate
     - field.field.node.issue.field_survivor_consent_form_comp
+    - field.field.node.issue.field_survivor_feedback_yesno
     - field.field.node.issue.field_survivor_informed_services
-    - field.field.node.issue.field_survivor_satisfaction
-    - field.field.node.issue.field_vulnerability_factors
+    - field.field.node.issue.field_survivor_nationality
+    - field.field.node.issue.field_survivor_requested_assista
+    - field.field.node.issue.field_type_of_report
+    - field.field.node.issue.field_when_agency_notified_yes
+    - field.field.node.issue.field_where_complainant_reported
     - field.field.node.issue.field_witness
     - field.field.node.issue.field_work_sector_of_accused
+    - field.field.node.issue.field_year_birth_survivor
+    - field.field.node.issue.field_year_of_birth
     - node.type.issue
   module:
     - comment
@@ -344,9 +354,25 @@ content:
       link: true
     third_party_settings: {  }
     region: content
+  field_agency_acknowledge_receipt:
+    label: above
+    weight: 95
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
   field_agency_allegation_referred:
     label: inline
     weight: 13
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_agency_notified_yesno:
+    label: above
+    weight: 85
     type: entity_reference_label
     settings:
       link: true
@@ -376,6 +402,14 @@ content:
       link: true
     third_party_settings: {  }
     region: content
+  field_assistance_already_provide:
+    label: above
+    weight: 82
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
   field_assistance_provided:
     label: above
     weight: 14
@@ -399,9 +433,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_complainant_satisfaction:
-    label: inline
-    weight: 22
+  field_complaint_referred:
+    label: above
+    weight: 93
     type: entity_reference_label
     settings:
       link: true
@@ -494,14 +528,6 @@ content:
     settings:
       format_type: really_short
       timezone_override: ''
-    third_party_settings: {  }
-    region: content
-  field_ethnic_origin_nationality:
-    label: inline
-    weight: 11
-    type: string
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     region: content
   field_feedback_provided_agency:
@@ -604,6 +630,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_nationality:
+    label: above
+    weight: 87
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
   field_non_sea_complaint:
     label: inline
     weight: 74
@@ -626,14 +660,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_priority_level:
-    label: inline
-    weight: 73
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
   field_referral_agency:
     label: inline
     weight: 13
@@ -648,6 +674,14 @@ content:
     type: string
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_report_response:
+    label: above
+    weight: 98
+    type: entity_reference_label
+    settings:
+      link: true
     third_party_settings: {  }
     region: content
   field_reporting_method:
@@ -673,9 +707,33 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_service_provided_yes:
+    label: above
+    weight: 83
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_service_requested_yes:
+    label: above
+    weight: 81
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
   field_sex:
     label: inline
     weight: 8
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_sex_complainant:
+    label: above
+    weight: 89
     type: entity_reference_label
     settings:
       link: true
@@ -697,17 +755,17 @@ content:
       link: true
     third_party_settings: {  }
     region: content
-  field_survivor_complainant_rate:
+  field_survivor_consent_form_comp:
     label: inline
-    weight: 24
+    weight: 7
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
-  field_survivor_consent_form_comp:
-    label: inline
-    weight: 7
+  field_survivor_feedback_yesno:
+    label: above
+    weight: 84
     type: entity_reference_label
     settings:
       link: true
@@ -721,17 +779,42 @@ content:
       link: true
     third_party_settings: {  }
     region: content
-  field_survivor_satisfaction:
-    label: inline
-    weight: 23
+  field_survivor_nationality:
+    label: above
+    weight: 92
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
-  field_vulnerability_factors:
+  field_survivor_requested_assista:
     label: above
-    weight: 12
+    weight: 80
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_type_of_report:
+    label: above
+    weight: 94
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_when_agency_notified_yes:
+    label: above
+    weight: 86
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_where_complainant_reported:
+    label: above
+    weight: 90
     type: entity_reference_label
     settings:
       link: true
@@ -752,6 +835,24 @@ content:
       link: true
     third_party_settings: {  }
     region: content
+  field_year_birth_survivor:
+    label: above
+    weight: 91
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_year_of_birth:
+    label: above
+    weight: 88
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -761,5 +862,4 @@ hidden:
   field_if_other_accused_agency: true
   field_other_agency_safety_plan: true
   field_other_camp_survivor: true
-  field_other_vulnerability_factor: true
   field_referral_agency_other: true

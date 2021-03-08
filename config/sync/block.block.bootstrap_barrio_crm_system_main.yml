@@ -1,4 +1,4 @@
-uuid: fe8ed5ed-3c3b-4fac-9e5f-eae1b8662c36
+uuid: b07553ef-1777-4609-bab5-35a90199eb9c
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_barrio_crm_system_main
 theme: bootstrap_barrio
 region: content
-weight: 0
+weight: -21
 provider: null
 plugin: system_main_block
 settings:

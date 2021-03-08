@@ -1,0 +1,26 @@
+uuid: 1c5501e1-62d5-48d4-bcac-deb4818a3c21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_report_response
+    - node.type.issue
+    - taxonomy.vocabulary.report_response
+id: node.issue.field_report_response
+field_name: field_report_response
+entity_type: node
+bundle: issue
+label: 'Report Response'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      report_response: report_response
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

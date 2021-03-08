@@ -1,20 +1,20 @@
-uuid: 2de629fb-3a55-473c-b519-80106edcd30d
+uuid: ab178f81-5a3e-427b-8974-a5c449d88641
 langcode: en
 status: true
 dependencies: {  }
 name: thumb_xs
 label: 'Thumb XS'
 effects:
-  1b2e430a-f64b-48fd-9cf6-219d97c2314a:
-    uuid: 1b2e430a-f64b-48fd-9cf6-219d97c2314a
+  ede63fcb-07ba-442c-ab8f-492064d98983:
+    uuid: ede63fcb-07ba-442c-ab8f-492064d98983
     id: image_scale
     weight: 1
     data:
       width: 40
       height: null
       upscale: true
-  a0fd87a0-2ca6-4123-9390-9c883e975d2c:
-    uuid: a0fd87a0-2ca6-4123-9390-9c883e975d2c
+  18d615cc-c209-431c-9379-30ea2673c73b:
+    uuid: 18d615cc-c209-431c-9379-30ea2673c73b
     id: image_crop
     weight: 2
     data:

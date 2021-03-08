@@ -1,20 +1,20 @@
-uuid: b54b0917-b745-49e0-8009-6d512e8b4d17
+uuid: 366d2472-2da1-4f73-bdbf-2920a700590b
 langcode: en
 status: true
 dependencies: {  }
 name: smaller_thumb
 label: 'Smaller Thumb'
 effects:
-  19ac0556-9ac2-4564-9ab6-9e620e14be65:
-    uuid: 19ac0556-9ac2-4564-9ab6-9e620e14be65
+  fbdd069d-6fe5-4f3f-94ee-d3c46416fc51:
+    uuid: fbdd069d-6fe5-4f3f-94ee-d3c46416fc51
     id: image_scale
     weight: 1
     data:
       width: 75
       height: null
       upscale: true
-  34fdb982-3b7a-4cac-b1b7-1852b8558d48:
-    uuid: 34fdb982-3b7a-4cac-b1b7-1852b8558d48
+  7e984ecc-8c4b-47ed-9c4c-af8bdb745aa6:
+    uuid: 7e984ecc-8c4b-47ed-9c4c-af8bdb745aa6
     id: image_crop
     weight: 2
     data:

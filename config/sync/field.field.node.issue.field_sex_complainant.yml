@@ -1,0 +1,26 @@
+uuid: 44f76b6a-db8f-4f6e-8748-e20fe55959dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sex_complainant
+    - node.type.issue
+    - taxonomy.vocabulary.sex
+id: node.issue.field_sex_complainant
+field_name: field_sex_complainant
+entity_type: node
+bundle: issue
+label: Sex
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      sex: sex
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

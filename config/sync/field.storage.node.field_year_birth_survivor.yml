@@ -1,0 +1,20 @@
+uuid: fbd02bc1-6323-47a4-b026-e4041239a3a6
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_year_birth_survivor
+field_name: field_year_birth_survivor
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

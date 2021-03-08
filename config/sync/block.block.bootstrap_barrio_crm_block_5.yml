@@ -1,9 +1,9 @@
-uuid: d08aedd9-5d7c-4a2b-ac4e-16c51c78a8f2
+uuid: b441d8d9-be73-4752-8a79-9f8aeb618d52
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5ff08977-6a5b-4814-a233-4e6d602b6886'
+    - 'block_content:basic:e2651566-2ae9-486c-a9e4-a147bcfdbc7f'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: bootstrap_barrio
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:5ff08977-6a5b-4814-a233-4e6d602b6886'
+plugin: 'block_content:e2651566-2ae9-486c-a9e4-a147bcfdbc7f'
 settings:
-  id: 'block_content:5ff08977-6a5b-4814-a233-4e6d602b6886'
+  id: 'block_content:e2651566-2ae9-486c-a9e4-a147bcfdbc7f'
   label: ''
   provider: block_content
   label_display: '0'

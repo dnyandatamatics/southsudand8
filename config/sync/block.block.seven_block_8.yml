@@ -1,0 +1,30 @@
+uuid: 898ee2ec-40b7-442f-9b53-fe596f22978d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:14c7bed1-f694-4952-8b56-70d590058532'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_block_8
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:14c7bed1-f694-4952-8b56-70d590058532'
+settings:
+  id: 'block_content:14c7bed1-f694-4952-8b56-70d590058532'
+  label: '<none>'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/add/issue

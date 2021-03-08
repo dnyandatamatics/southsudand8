@@ -1,0 +1,14 @@
+uuid: 47f5649b-340b-4fad-927d-2ef5c49381b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.national_coordinator
+  module:
+    - user
+id: user_remove_role_action.national_coordinator
+label: 'Remove the national coordinator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: national_coordinator

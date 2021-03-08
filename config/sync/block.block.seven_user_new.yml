@@ -1,6 +1,6 @@
-uuid: 94d626c9-97dc-4d1d-8bda-b26059743fee
+uuid: e5dcd4f5-8286-4dd5-955a-2747d0caef0e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.who_s_new

@@ -1,4 +1,4 @@
-uuid: 31f73398-b5e3-451a-8bb7-98eebdb2b590
+uuid: ed6506eb-6958-422d-aca7-e96099062b64
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: crm_2021_local_tasks
 theme: crm_2021
 region: content
-weight: -40
+weight: -10
 provider: null
 plugin: local_tasks_block
 settings:

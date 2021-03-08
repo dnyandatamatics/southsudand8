@@ -1,0 +1,26 @@
+uuid: 4e44de7c-d663-49df-8a7c-4ef39752cb9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nationality
+    - node.type.issue
+    - taxonomy.vocabulary.country
+id: node.issue.field_nationality
+field_name: field_nationality
+entity_type: node
+bundle: issue
+label: Nationality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      country: country
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

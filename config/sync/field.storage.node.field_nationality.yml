@@ -1,0 +1,20 @@
+uuid: e7101c8a-dce7-4740-a19f-13489414ed24
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_nationality
+field_name: field_nationality
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

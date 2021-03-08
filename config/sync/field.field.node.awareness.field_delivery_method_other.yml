@@ -1,0 +1,19 @@
+uuid: f6dad566-d4e0-452f-ab85-3dd53d6ecd2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_delivery_method_other
+    - node.type.awareness
+id: node.awareness.field_delivery_method_other
+field_name: field_delivery_method_other
+entity_type: node
+bundle: awareness
+label: 'If Others, Please identify method of delivery used?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

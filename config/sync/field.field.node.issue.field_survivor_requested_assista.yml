@@ -1,0 +1,26 @@
+uuid: dec6d960-68b3-4188-b58b-41e2be88e519
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_survivor_requested_assista
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_survivor_requested_assista
+field_name: field_survivor_requested_assista
+entity_type: node
+bundle: issue
+label: 'Has survivor requested any assistance?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

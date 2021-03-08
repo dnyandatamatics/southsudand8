@@ -1,0 +1,28 @@
+uuid: 28ae8d0a-b2e5-4caf-8d5b-d24970e91986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_complaint_referred
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_complaint_referred
+field_name: field_complaint_referred
+entity_type: node
+bundle: issue
+label: 'This complaint has been referred'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '29'
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

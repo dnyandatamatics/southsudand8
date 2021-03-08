@@ -1,6 +1,6 @@
-uuid: 4122ed37-98d1-4ade-940d-07ccabf45eec
+uuid: 36ff6a94-4403-4228-ab2b-52d06c791eb2
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: crm_2021_messages
 theme: crm_2021
-region: pagetop
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

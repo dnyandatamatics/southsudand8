@@ -1,4 +1,4 @@
-uuid: 404edbef-4821-46ed-9b87-b6709beeef8e
+uuid: 96b17ed0-3032-4531-8534-638a81c9baa5
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: crm_2021_local_actions
 theme: crm_2021
 region: content
-weight: -20
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

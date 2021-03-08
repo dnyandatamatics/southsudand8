@@ -1,4 +1,4 @@
-uuid: d3defe15-661d-42c7-83a5-8faccf4e6a85
+uuid: 13556022-2a47-43a5-81b4-8286076cb4b4
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.issue.field_if_other_accused_agency
 field_name: field_if_other_accused_agency
 entity_type: node
 bundle: issue
-label: 'If other, please identify the agency'
+label: 'If NGO, please identify the agency'
 description: ''
 required: false
 translatable: false

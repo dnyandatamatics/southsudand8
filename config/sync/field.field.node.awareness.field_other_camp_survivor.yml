@@ -1,4 +1,4 @@
-uuid: 1f878510-3411-4aeb-99cc-4328fc20787b
+uuid: aefce541-43c1-478c-9227-3248e0a64d53
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.awareness.field_other_camp_survivor
 field_name: field_other_camp_survivor
 entity_type: node
 bundle: awareness
-label: 'If other, please identify the camp'
+label: 'If other, please identify the site'
 description: ''
 required: false
 translatable: false

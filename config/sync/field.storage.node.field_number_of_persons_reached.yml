@@ -1,0 +1,21 @@
+uuid: df6aa8d4-1c82-43ef-8d9c-9533c4ba8fa4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_number_of_persons_reached
+field_name: field_number_of_persons_reached
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

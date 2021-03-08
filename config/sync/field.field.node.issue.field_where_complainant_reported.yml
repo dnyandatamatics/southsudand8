@@ -1,0 +1,26 @@
+uuid: 69a02481-6e1d-4c9f-bcb9-659a8fa79662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_where_complainant_reported
+    - node.type.issue
+    - taxonomy.vocabulary.camp
+id: node.issue.field_where_complainant_reported
+field_name: field_where_complainant_reported
+entity_type: node
+bundle: issue
+label: 'Place where complainant reported'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      camp: camp
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

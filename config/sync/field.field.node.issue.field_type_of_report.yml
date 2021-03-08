@@ -1,0 +1,26 @@
+uuid: d47aeade-189c-49bf-b10a-92138d2d0409
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_of_report
+    - node.type.issue
+    - taxonomy.vocabulary.type_of_report
+id: node.issue.field_type_of_report
+field_name: field_type_of_report
+entity_type: node
+bundle: issue
+label: 'Type of Report'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      type_of_report: type_of_report
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: ecb6d2a6-53ba-49ac-bf1d-8bdde72b2117
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_persons_reached
+    - node.type.awareness
+id: node.awareness.field_number_of_persons_reached
+field_name: field_number_of_persons_reached
+entity_type: node
+bundle: awareness
+label: 'Number of persons reached'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

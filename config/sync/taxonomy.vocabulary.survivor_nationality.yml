@@ -1,0 +1,8 @@
+uuid: efe7ae87-7012-4dcf-a3b4-cdf879025351
+langcode: en
+status: true
+dependencies: {  }
+name: 'Survivor Nationality'
+vid: survivor_nationality
+description: ''
+weight: 0
