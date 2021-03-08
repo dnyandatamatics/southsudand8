@@ -1,0 +1,20 @@
+uuid: 6a3228fd-37ab-45aa-9329-41d73f658a25
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_type_of_report
+field_name: field_type_of_report
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

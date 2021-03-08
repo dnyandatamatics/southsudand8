@@ -1,0 +1,21 @@
+uuid: e303c999-8e27-4743-9682-8c21c8779915
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_when_agency_notified_yes
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_when_agency_notified_yes
+field_name: field_when_agency_notified_yes
+entity_type: node
+bundle: issue
+label: 'if yes, when:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

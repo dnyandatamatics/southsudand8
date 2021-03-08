@@ -1,9 +1,9 @@
-uuid: 56b1bca9-084f-4d84-9f48-e09ca5c5bd44
+uuid: 898b4141-78f0-42b7-b7f1-058d0f4f9d2c
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:9e6caab2-31ad-4595-9714-f64793864d50'
+    - 'block_content:basic:0c1ba12a-a4d7-4d0f-abe0-b32973fb4b36'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: bartik
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:9e6caab2-31ad-4595-9714-f64793864d50'
+plugin: 'block_content:0c1ba12a-a4d7-4d0f-abe0-b32973fb4b36'
 settings:
-  id: 'block_content:9e6caab2-31ad-4595-9714-f64793864d50'
+  id: 'block_content:0c1ba12a-a4d7-4d0f-abe0-b32973fb4b36'
   label: 'PSEA Awareness-raising'
   provider: block_content
   label_display: visible

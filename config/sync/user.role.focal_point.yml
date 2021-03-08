@@ -1,0 +1,11 @@
+uuid: 70802a60-eb01-4eb4-a07c-ed0f06661391
+langcode: en
+status: true
+dependencies: {  }
+id: focal_point
+label: 'focal point'
+weight: 5
+is_admin: null
+permissions:
+  - 'create issue content'
+  - 'edit own issue content'

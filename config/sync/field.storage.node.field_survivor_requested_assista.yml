@@ -1,0 +1,20 @@
+uuid: 702887f1-3712-4bbd-aeb1-82d69ddc765f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_survivor_requested_assista
+field_name: field_survivor_requested_assista
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 1988d13a-f5d2-43f6-a9c3-3037002f9567
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_requested_yes
+    - node.type.issue
+    - taxonomy.vocabulary.assistance_provided
+id: node.issue.field_service_requested_yes
+field_name: field_service_requested_yes
+entity_type: node
+bundle: issue
+label: 'If yes please identify the service requested?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      assistance_provided: assistance_provided
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

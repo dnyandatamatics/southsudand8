@@ -1,0 +1,26 @@
+uuid: d7e46862-623f-4f8f-add6-adef79ff5664
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_agency
+    - node.type.awareness
+    - taxonomy.vocabulary.agency
+id: node.awareness.field_lead_agency
+field_name: field_lead_agency
+entity_type: node
+bundle: awareness
+label: 'Lead Agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      agency: agency
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

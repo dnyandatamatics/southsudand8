@@ -1,0 +1,26 @@
+uuid: 9e25aa71-edb8-4989-a938-adc6783c431e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_survivor_nationality
+    - node.type.issue
+    - taxonomy.vocabulary.survivor_nationality
+id: node.issue.field_survivor_nationality
+field_name: field_survivor_nationality
+entity_type: node
+bundle: issue
+label: Nationality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      survivor_nationality: survivor_nationality
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

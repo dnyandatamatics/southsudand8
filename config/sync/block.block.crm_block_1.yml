@@ -1,9 +1,9 @@
-uuid: a2ba6157-517b-4c96-b902-4092b22b69ce
+uuid: 9804b4fa-1357-4743-91ea-ea2f5bea3d49
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:6f74faae-7597-4334-9dc8-b5b936dba395'
+    - 'block_content:basic:dfba545b-a17f-48d6-a462-17ac10f63885'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: bartik
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+plugin: 'block_content:dfba545b-a17f-48d6-a462-17ac10f63885'
 settings:
-  id: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+  id: 'block_content:dfba545b-a17f-48d6-a462-17ac10f63885'
   label: ''
   provider: block_content
   label_display: '0'

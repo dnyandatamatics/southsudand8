@@ -1,4 +1,4 @@
-uuid: b61f604b-16e6-4a52-bb34-011224b78325
+uuid: 29a03618-ef13-4b7e-bfc2-6d779bd91871
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.awareness.field_other_beneficiary
 field_name: field_other_beneficiary
 entity_type: node
 bundle: awareness
-label: 'If other, please identify the beneficiary'
+label: 'If other, please identify the target audience'
 description: ''
 required: false
 translatable: false

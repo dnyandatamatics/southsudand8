@@ -1,20 +1,20 @@
-uuid: 6c176faa-4697-45ee-a681-debb9700caa3
+uuid: 6c57aa62-428a-4318-8421-7d4b3941e8df
 langcode: en
 status: true
 dependencies: {  }
 name: new_slideshow
 label: 'New Slideshow'
 effects:
-  7e3ee17a-e1a2-4280-b388-ab7e0aac99a5:
-    uuid: 7e3ee17a-e1a2-4280-b388-ab7e0aac99a5
+  e657d71e-7b75-47d2-b0c2-bff53f3e36b6:
+    uuid: e657d71e-7b75-47d2-b0c2-bff53f3e36b6
     id: image_scale_and_crop
     weight: 1
     data:
       width: 1200
       height: 515
       anchor: center-center
-  4b7bb9af-69f6-415e-a1db-e0b3e5efbb31:
-    uuid: 4b7bb9af-69f6-415e-a1db-e0b3e5efbb31
+  fa001ebb-7d73-4c2e-aaf1-ac95ab1d2736:
+    uuid: fa001ebb-7d73-4c2e-aaf1-ac95ab1d2736
     id: image_crop
     weight: 2
     data:

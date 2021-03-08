@@ -1,4 +1,4 @@
-uuid: 18e41f71-5402-44e0-b55d-035307f54f3f
+uuid: 3d6ca3cd-5835-4cef-bed1-a834d39340bf
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: crm_2021_crm_system_main
 theme: crm_2021
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: system_main_block
 settings:

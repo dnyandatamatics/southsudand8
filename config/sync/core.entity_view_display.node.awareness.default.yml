@@ -1,4 +1,4 @@
-uuid: a1cc831e-507a-4e53-b415-4fff259cecfc
+uuid: 7ebe75fe-d665-4611-a9cf-8b781addb99f
 langcode: en
 status: true
 dependencies:
@@ -14,10 +14,15 @@ dependencies:
     - field.field.node.awareness.field_camp_of_survivor
     - field.field.node.awareness.field_case_reporting
     - field.field.node.awareness.field_date_recorded
+    - field.field.node.awareness.field_delivery_method_other
     - field.field.node.awareness.field_how_to_file_a_complaint
+    - field.field.node.awareness.field_if_ngo_provide_ngo_name
+    - field.field.node.awareness.field_lead_agency
     - field.field.node.awareness.field_meaning_of_sea
     - field.field.node.awareness.field_method_of_comprehension
     - field.field.node.awareness.field_method_of_contact
+    - field.field.node.awareness.field_method_of_delivery
+    - field.field.node.awareness.field_number_of_persons_reached
     - field.field.node.awareness.field_other_assessment_conductor
     - field.field.node.awareness.field_other_beneficiary
     - field.field.node.awareness.field_other_camp_survivor
@@ -184,9 +189,33 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     region: content
+  field_delivery_method_other:
+    label: above
+    weight: 57
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
   field_how_to_file_a_complaint:
     label: inline
     weight: 11
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_if_ngo_provide_ngo_name:
+    label: above
+    weight: 58
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_lead_agency:
+    label: above
+    weight: 54
     type: entity_reference_label
     settings:
       link: true
@@ -214,6 +243,22 @@ content:
     type: entity_reference_label
     settings:
       link: true
+    third_party_settings: {  }
+    region: content
+  field_method_of_delivery:
+    label: above
+    weight: 56
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_number_of_persons_reached:
+    label: above
+    weight: 55
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     region: content
   field_prior_gbv_training:

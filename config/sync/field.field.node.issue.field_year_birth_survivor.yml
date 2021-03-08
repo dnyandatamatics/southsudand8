@@ -1,0 +1,21 @@
+uuid: d5435480-00f4-4873-8098-9d00b363af99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_birth_survivor
+    - node.type.issue
+  module:
+    - datetime
+id: node.issue.field_year_birth_survivor
+field_name: field_year_birth_survivor
+entity_type: node
+bundle: issue
+label: 'Year of birth'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

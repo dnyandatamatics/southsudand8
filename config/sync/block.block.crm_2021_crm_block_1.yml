@@ -1,9 +1,9 @@
-uuid: 60c529e6-f6f2-4d98-83c0-4a10a44d9284
+uuid: 8a0e486f-6f7b-4528-8da5-dc4c3f9b7549
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:6f74faae-7597-4334-9dc8-b5b936dba395'
+    - 'block_content:basic:dfba545b-a17f-48d6-a462-17ac10f63885'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: crm_2021_crm_block_1
 theme: crm_2021
 region: footer1
-weight: -9
+weight: -10
 provider: null
-plugin: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+plugin: 'block_content:dfba545b-a17f-48d6-a462-17ac10f63885'
 settings:
-  id: 'block_content:6f74faae-7597-4334-9dc8-b5b936dba395'
+  id: 'block_content:dfba545b-a17f-48d6-a462-17ac10f63885'
   label: ''
   provider: block_content
   label_display: '0'

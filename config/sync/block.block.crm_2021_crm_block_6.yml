@@ -1,9 +1,9 @@
-uuid: 1e82f237-0185-40d5-824e-54f2a2756914
+uuid: c911a45a-113d-4928-bf52-8ca5e7110592
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
+    - 'block_content:basic:bf202db4-805a-4d5c-bf16-fedd3b14bf78'
   module:
     - block_content
     - system
@@ -12,12 +12,12 @@ dependencies:
 id: crm_2021_crm_block_6
 theme: crm_2021
 region: content
-weight: 0
+weight: -8
 provider: null
-plugin: 'block_content:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
+plugin: 'block_content:bf202db4-805a-4d5c-bf16-fedd3b14bf78'
 settings:
-  id: 'block_content:b5b3d878-45af-49d9-81a3-4c95cb7c7664'
-  label: 'Contact us info'
+  id: 'block_content:bf202db4-805a-4d5c-bf16-fedd3b14bf78'
+  label: ''
   provider: block_content
   label_display: '0'
   status: true
@@ -28,4 +28,3 @@ visibility:
     id: request_path
     negate: false
     pages: /contact-us
-    context_mapping: {  }

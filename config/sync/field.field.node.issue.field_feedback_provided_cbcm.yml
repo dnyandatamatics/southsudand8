@@ -1,4 +1,4 @@
-uuid: 4ce02bb0-e977-4ece-9d1e-d14eb7934f3e
+uuid: 9ebd510c-e246-4e4e-9cdf-6b699bcb75b5
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ id: node.issue.field_feedback_provided_cbcm
 field_name: field_feedback_provided_cbcm
 entity_type: node
 bundle: issue
-label: 'Case Feedback Provided To Survivor or Complainant by CBCM'
+label: 'Case Feedback Provided To Survivor or Complainant by Task Force'
 description: ''
 required: false
 translatable: false

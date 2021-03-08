@@ -1,4 +1,4 @@
-uuid: 29008465-0272-471f-9f08-cc20fb5ef659
+uuid: 350d22c3-edca-47ee-a0b3-107909c550e4
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ id: node.issue.field_work_sector_of_accused
 field_name: field_work_sector_of_accused
 entity_type: node
 bundle: issue
-label: 'Work Sector of Accused'
+label: 'Nature of work of the Accused'
 description: ''
 required: false
 translatable: false

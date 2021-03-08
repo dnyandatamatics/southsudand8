@@ -1,9 +1,9 @@
-uuid: 0ac419a2-11d6-4314-a81f-f7d4a7cff6b3
+uuid: 13470caa-8624-47b9-973b-4b36bf7ec61f
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:1229dd37-4d4e-4032-9ab5-cd9059e480df'
+    - 'block_content:basic:da1a2b6a-40d9-48cd-ba5a-39f04d8ae28e'
   module:
     - block_content
     - system
@@ -12,12 +12,12 @@ dependencies:
 id: crm_2021_crm_block_4
 theme: crm_2021
 region: banner
-weight: -7
+weight: -8
 provider: null
-plugin: 'block_content:1229dd37-4d4e-4032-9ab5-cd9059e480df'
+plugin: 'block_content:da1a2b6a-40d9-48cd-ba5a-39f04d8ae28e'
 settings:
-  id: 'block_content:1229dd37-4d4e-4032-9ab5-cd9059e480df'
-  label: 'Home Page Banner'
+  id: 'block_content:da1a2b6a-40d9-48cd-ba5a-39f04d8ae28e'
+  label: ''
   provider: block_content
   label_display: '0'
   status: true
@@ -28,4 +28,3 @@ visibility:
     id: request_path
     negate: false
     pages: '<front>'
-    context_mapping: {  }

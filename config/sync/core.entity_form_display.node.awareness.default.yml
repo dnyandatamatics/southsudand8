@@ -1,4 +1,4 @@
-uuid: 6e289498-cbb7-42d6-a71a-764735f2bc8d
+uuid: faf21644-197f-4218-88e2-91c03657eed2
 langcode: en
 status: true
 dependencies:
@@ -13,10 +13,15 @@ dependencies:
     - field.field.node.awareness.field_camp_of_survivor
     - field.field.node.awareness.field_case_reporting
     - field.field.node.awareness.field_date_recorded
+    - field.field.node.awareness.field_delivery_method_other
     - field.field.node.awareness.field_how_to_file_a_complaint
+    - field.field.node.awareness.field_if_ngo_provide_ngo_name
+    - field.field.node.awareness.field_lead_agency
     - field.field.node.awareness.field_meaning_of_sea
     - field.field.node.awareness.field_method_of_comprehension
     - field.field.node.awareness.field_method_of_contact
+    - field.field.node.awareness.field_method_of_delivery
+    - field.field.node.awareness.field_number_of_persons_reached
     - field.field.node.awareness.field_other_assessment_conductor
     - field.field.node.awareness.field_other_beneficiary
     - field.field.node.awareness.field_other_camp_survivor
@@ -55,13 +60,29 @@ third_party_settings:
         - field_special_needs_of_children
         - field_roles_and_responsibilities
       parent_name: ''
-      weight: 25
+      weight: 28
       label: 'Level of Comprehension'
       format_settings:
         formatter: collapsible
         description: ''
         classes: 'group-comprehension field-group-fieldset'
         required_fields: true
+      format_type: fieldset
+      region: content
+    group_demog_target:
+      children:
+        - field_sex
+        - field_age_group
+        - field_number_of_persons_reached
+      parent_name: ''
+      weight: 6
+      label: 'Demographic Targeted'
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: 'group-demog-target field-group-fieldset'
+        required_fields: true
+        id: ''
       format_type: fieldset
       region: content
 id: node.awareness.default
@@ -82,49 +103,49 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_age_group:
-    weight: 9
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_appropriate_conduct:
-    weight: 64
-    type: options_buttons
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_assessment_conductor:
-    weight: 16
-    type: options_buttons
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_assessment_method:
-    weight: 7
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_beneficiary:
-    weight: 4
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_beneficiary_agency:
     weight: 8
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_appropriate_conduct:
+    weight: 34
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_assessment_conductor:
+    weight: 9
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_assessment_method:
+    weight: 16
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_beneficiary:
+    weight: 13
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_beneficiary_agency:
+    weight: 17
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_camp_of_survivor:
-    weight: 11
+    weight: 4
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_case_reporting:
-    weight: 62
+    weight: 32
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
@@ -135,47 +156,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_delivery_method_other:
+    weight: 27
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
   field_how_to_file_a_complaint:
-    weight: 63
+    weight: 33
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_meaning_of_sea:
-    weight: 59
-    type: options_buttons
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_method_of_comprehension:
-    weight: 14
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_method_of_contact:
-    weight: 6
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_other_assessment_conductor:
-    weight: 17
-    type: string_textfield
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
-  field_other_beneficiary:
-    weight: 5
-    type: string_textfield
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
-  field_other_camp_survivor:
+  field_if_ngo_provide_ngo_name:
     weight: 12
     type: string_textfield
     settings:
@@ -183,8 +178,70 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_other_method_comprehension:
+  field_lead_agency:
+    weight: 11
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_meaning_of_sea:
+    weight: 29
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_method_of_comprehension:
+    weight: 19
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_method_of_contact:
     weight: 15
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_method_of_delivery:
+    weight: 26
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_number_of_persons_reached:
+    weight: 7
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_assessment_conductor:
+    weight: 10
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_beneficiary:
+    weight: 14
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_camp_survivor:
+    weight: 5
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_other_method_comprehension:
+    weight: 20
     type: string_textfield
     settings:
       size: 60
@@ -192,7 +249,7 @@ content:
     third_party_settings: {  }
     region: content
   field_other_source_sea_info:
-    weight: 19
+    weight: 8
     type: string_textfield
     settings:
       size: 60
@@ -200,13 +257,13 @@ content:
     third_party_settings: {  }
     region: content
   field_prior_gbv_training:
-    weight: 23
+    weight: 24
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_prior_gbv_training_dates:
-    weight: 24
+    weight: 25
     type: string_textfield
     settings:
       size: 60
@@ -214,13 +271,13 @@ content:
     third_party_settings: {  }
     region: content
   field_prior_psea_training:
-    weight: 21
+    weight: 22
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_prior_psea_training_dates:
-    weight: 22
+    weight: 23
     type: string_textfield
     settings:
       size: 60
@@ -228,55 +285,55 @@ content:
     third_party_settings: {  }
     region: content
   field_refugee_rights_sea:
-    weight: 61
+    weight: 31
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_risk_sea:
-    weight: 60
+    weight: 30
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_roles_and_responsibilities:
-    weight: 67
+    weight: 37
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_sex:
-    weight: 10
+    weight: 9
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_source_of_sea_information:
-    weight: 18
+    weight: 7
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_special_needs_of_children:
-    weight: 66
+    weight: 36
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_victims_needs_case_handle:
-    weight: 65
+    weight: 35
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_vulnerability_factors:
-    weight: 13
+    weight: 18
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_work_sector_of_accused:
-    weight: 20
+    weight: 21
     type: options_select
     settings: {  }
     third_party_settings: {  }

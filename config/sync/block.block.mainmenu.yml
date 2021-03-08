@@ -1,4 +1,4 @@
-uuid: 55818c27-d1f4-4d28-b129-fe94b8971460
+uuid: 9d4d300c-d9e0-4097-83d1-41fa9f1baf4b
 langcode: en
 status: true
 dependencies:
@@ -20,7 +20,7 @@ settings:
   provider: superfish
   label_display: '0'
   level: '1'
-  depth: '0'
+  depth: '3'
   expand_all_items: false
   menu_type: horizontal
   style: none

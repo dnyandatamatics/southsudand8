@@ -1,0 +1,14 @@
+uuid: 11c06616-bf36-4073-b5c6-d779d1c3ce3c
+langcode: en
+status: true
+dependencies: {  }
+id: national_coordinator
+label: 'national coordinator'
+weight: 6
+is_admin: null
+permissions:
+  - 'create issue content'
+  - 'delete any issue content'
+  - 'delete own issue content'
+  - 'edit any issue content'
+  - 'edit own issue content'

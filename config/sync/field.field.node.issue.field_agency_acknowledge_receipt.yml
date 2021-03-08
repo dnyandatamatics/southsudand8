@@ -1,0 +1,26 @@
+uuid: 2cc35b71-a429-48e8-a9ad-48f279241220
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_acknowledge_receipt
+    - node.type.issue
+    - taxonomy.vocabulary.yes_no
+id: node.issue.field_agency_acknowledge_receipt
+field_name: field_agency_acknowledge_receipt
+entity_type: node
+bundle: issue
+label: 'Concerned agency has acknowledged receipt of this complaint'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      yes_no: yes_no
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

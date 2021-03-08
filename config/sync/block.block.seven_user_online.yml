@@ -1,6 +1,6 @@
-uuid: 079c7fcf-eda1-4f74-b432-62848f1eaf9c
+uuid: b29d824b-6fbe-4dce-9c28-417268fc5131
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.who_s_online
