@@ -1,0 +1,21 @@
+uuid: 1c3929b5-8e76-4450-8687-fb53fafe9b3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - serial
+id: node.field_case_number_awareness
+field_name: field_case_number_awareness
+entity_type: node
+type: serial
+settings:
+  start_value: 1
+  init_existing_entities: 1
+module: serial
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

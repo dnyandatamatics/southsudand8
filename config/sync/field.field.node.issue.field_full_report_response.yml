@@ -1,0 +1,25 @@
+uuid: 14aa81dc-8bf8-4ac5-92cd-b93e89d49ae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_report_response
+    - node.type.issue
+  module:
+    - markup
+id: node.issue.field_full_report_response
+field_name: field_full_report_response
+entity_type: node
+bundle: issue
+label: 'Full Report Response'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>By filling out and submitting a Full Report, you will be asked to enter sensitive information about an incident in order to raise the incident to the South Sudan PSEA Task Force for action</strong></p>\r\n"
+    format: basic_html
+field_type: markup

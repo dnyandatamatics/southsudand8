@@ -1,0 +1,25 @@
+uuid: 5aff920a-ecbd-4215-8e7d-cdffa22f309c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_simple_report_response
+    - node.type.issue
+  module:
+    - markup
+id: node.issue.field_simple_report_response
+field_name: field_simple_report_response
+entity_type: node
+bundle: issue
+label: 'Simple Report Response'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>By filling out and submitting a Simple Report, you are informing the South Sudan PSEA Task Force about an incident for monitoring – this does not raise an incident to the TF for action</strong></p>\r\n"
+    format: basic_html
+field_type: markup

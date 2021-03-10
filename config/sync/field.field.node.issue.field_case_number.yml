@@ -1,0 +1,23 @@
+uuid: 088a8aba-b160-4cbc-b4df-2201da51e794
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_number
+    - node.type.issue
+  module:
+    - serial
+id: node.issue.field_case_number
+field_name: field_case_number
+entity_type: node
+bundle: issue
+label: 'Case Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: serial
