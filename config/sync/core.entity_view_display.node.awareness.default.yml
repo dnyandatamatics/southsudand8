@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.awareness.field_beneficiary
     - field.field.node.awareness.field_beneficiary_agency
     - field.field.node.awareness.field_camp_of_survivor
+    - field.field.node.awareness.field_case_number_awareness
     - field.field.node.awareness.field_case_reporting
     - field.field.node.awareness.field_date_recorded
     - field.field.node.awareness.field_delivery_method_other
@@ -46,6 +47,7 @@ dependencies:
     - comment
     - datetime
     - field_group
+    - serial
     - user
 third_party_settings:
   field_group:
@@ -171,6 +173,13 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    region: content
+  field_case_number_awareness:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: serial_default_formatter
     region: content
   field_case_reporting:
     label: inline

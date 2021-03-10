@@ -1,0 +1,8 @@
+uuid: 54bd6c91-8d2c-4e49-8eb9-4f10f829ff2c
+langcode: en
+status: true
+dependencies: {  }
+id: print_date
+label: 'print date'
+locked: false
+pattern: dMY

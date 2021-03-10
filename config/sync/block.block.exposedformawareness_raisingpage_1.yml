@@ -1,0 +1,29 @@
+uuid: 349bbd8f-27a2-4fef-af55-f09890f9af3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.awareness_raising
+  module:
+    - system
+    - views
+  theme:
+    - crm_2021
+id: exposedformawareness_raisingpage_1
+theme: crm_2021
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:awareness_raising-page_1'
+settings:
+  id: 'views_exposed_filter_block:awareness_raising-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: 'Filter By'
+visibility:
+  request_path:
+    id: request_path
+    pages: /awareness-raising
+    negate: false
+    context_mapping: {  }

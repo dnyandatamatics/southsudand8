@@ -37,6 +37,7 @@
         "drupal/geolocation": "^3.2",
         "drupal/imce": "^2.3",
         "drupal/libraries": "^3.0@beta",
+        "drupal/markup": "^1.0@beta",
         "drupal/masquerade": "^2.0@beta",
         "drupal/memcache": "^2.2",
         "drupal/password_policy": "^3.0@beta",

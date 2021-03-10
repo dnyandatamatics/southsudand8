@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.issue.field_assistance_already_provide
     - field.field.node.issue.field_assistance_provided
     - field.field.node.issue.field_camp_of_survivor
+    - field.field.node.issue.field_case_number
     - field.field.node.issue.field_case_outcome
     - field.field.node.issue.field_complaint_referred
     - field.field.node.issue.field_contact_details
@@ -37,6 +38,7 @@ dependencies:
     - field.field.node.issue.field_feedback_provided_txt_cbcm
     - field.field.node.issue.field_feedback_that_was_provided
     - field.field.node.issue.field_follow_up_cbcm
+    - field.field.node.issue.field_full_report_response
     - field.field.node.issue.field_identity_number
     - field.field.node.issue.field_if_other_accused_agency
     - field.field.node.issue.field_incident_description
@@ -64,6 +66,7 @@ dependencies:
     - field.field.node.issue.field_sex
     - field.field.node.issue.field_sex_complainant
     - field.field.node.issue.field_sex_of_accused
+    - field.field.node.issue.field_simple_report_response
     - field.field.node.issue.field_status_of_case
     - field.field.node.issue.field_survivor_consent_form_comp
     - field.field.node.issue.field_survivor_feedback_yesno
@@ -82,7 +85,9 @@ dependencies:
     - comment
     - datetime
     - field_group
+    - markup
     - path
+    - serial
 third_party_settings:
   field_group:
     group_general_info:
@@ -425,6 +430,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_case_number:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: serial_default_widget
+    region: content
   field_case_outcome:
     weight: 112
     type: string_textarea
@@ -534,6 +545,12 @@ content:
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_full_report_response:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
     region: content
   field_identity_number:
     weight: 55
@@ -726,6 +743,12 @@ content:
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_simple_report_response:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
     region: content
   field_status_of_case:
     weight: 109
