@@ -1,0 +1,12 @@
+services:
+  crm_awareness.default:
+    class: Drupal\crm_awareness\EventSubscriber\CrmAwarenesSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+  logger.channel.crm_awareness:
+    parent: logger.channel_base
+    arguments: ['crm_awareness']
+  crm_awareness.helper:
+    class: Drupal\crm_awareness\CrmAwarenesService
+    arguments: ['@entity_type.manager', '@database']
