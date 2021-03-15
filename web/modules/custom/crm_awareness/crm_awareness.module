@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains crm_awareness.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function crm_awareness_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the crm_awareness module.
+    case 'help.page.crm_awareness':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RM Awareness Helper') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function crm_awareness_theme() {
+  return [
+    'crm_awareness' => [
+      'render element' => 'children',
+    ],
+  ];
+}

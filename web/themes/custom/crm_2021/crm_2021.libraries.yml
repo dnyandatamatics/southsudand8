@@ -5,14 +5,22 @@ global-styling:
   css:
     component:
       css/style.css: {}
-      #css/colors.css: {}
-bootstrap:
+
+leaflet-lib:
+  version: VERSION
   js:
-    /libraries/popper.js/dist/umd/popper.min.js: {}
-    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+    leaflet/leaflet.js: {}
   css:
     component:
-      /libraries/bootstrap/dist/css/bootstrap.min.css: {}
+      leaflet/leaflet.css: {}
+
+leaflet-markercluster:
+  version: VERSION
+  css:
+    component:
+      leaflet_markercluster/dist/MarkerCluster.css: {}
+      leaflet_markercluster/dist/MarkerCluster.Default.css: {}
+
 bootstrap_cdn:
   js:
     //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}

@@ -1,0 +1,4 @@
+crmawarenes-styling:
+  version: VERSION
+  js:
+    js/crm_awareness.js: {}
