@@ -12,7 +12,7 @@ dependencies:
 id: crm_2021_crm_block_5
 theme: crm_2021
 region: banner
-weight: -9
+weight: -10
 provider: null
 plugin: 'block_content:e2651566-2ae9-486c-a9e4-a147bcfdbc7f'
 settings:
