@@ -117,6 +117,14 @@
   </div>
 </header>
 
+   {% if page.highlighted %}
+      <div class="highlighted">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.highlighted }}
+        </aside>
+      </div>
+    {% endif %}
+    
 {# <?php print $messages; ?> #}
 
 {% if page.banner %}
