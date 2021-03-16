@@ -57,19 +57,50 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
       if ($view->id() == 'awareness_raising' && $view->current_display == 'attachment_1') {
           
           $current_path = \Drupal::service('path.current')->getPath();
+          $host = \Drupal::request()->getSchemeAndHttpHost();
+          $location = $host.$current_path. "?field_camp_of_survivor_tid=";
+     
+  
+          $arr_result = $view->result;
           
-          $result = $view->result;
-          if(0 < count($result)){
+    
+          if(0 < count($arr_result)){
+              
+              $arr_camp_survivor = [];
+              
+              foreach ($arr_result as $key => $result){
+                  
+                 /**
+                  * 
+                  * @var \Drupal\node\Entity\Node $obj_node
+                  */ 
+                 $obj_node=  $result->_entity;
+                 
+                  /**
+                   *
+                   * @var \Drupal\taxonomy\Entity\Term $field_camp_of_survivor
+                   */
+                  $field_camp_of_survivor                 = $result->_relationship_entities['field_camp_of_survivor'];
+                  $arr_camp_survivor[$key]['CampId']      = $field_camp_of_survivor->id();
+                  $arr_camp_survivor[$key]['CampName']    = $field_camp_of_survivor->getName();
+                  $arr_camp_survivor[$key]['Longitude']   = $field_camp_of_survivor->get('field_long')->value;
+                  $arr_camp_survivor[$key]['Latitude']    = $field_camp_of_survivor->get('field_lat')->value;
+                  $arr_camp_survivor[$key]['Coordinates'] = [$arr_camp_survivor[$key]['Latitude'], $arr_camp_survivor[$key]['Longitude']];
+                  $arr_camp_survivor[$key]['Count']       = $obj_node->getTitle();
+                  $arr_camp_survivor[$key]['nid']         = $obj_node->id();
+                  
+                  
+              }
+              //echo "<pre>"; print_r($arr_camp_survivor);exit;
         
               $view->element['#attached']['library'][] = 'crm_2021/leaflet-lib';
               $view->element['#attached']['library'][] = 'crm_2021/leaflet-markercluster';
               $view->element['#attached']['library'][] = 'crm_awareness/crmawarenes-styling';
               
               $view->element['#attached']['drupalSettings']['crm_awareness'] = [
-                  'baseURL'     => $current_path,
-                  'rows'     => $result,
-                  'orows'     => ['abc'],
-                  'countryCodes'=> 'abc'
+                  'location' => $location,
+                  'rows'     => $arr_camp_survivor,
+                  'orows'    => $result
               ];
           }
           

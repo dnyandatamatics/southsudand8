@@ -4,9 +4,7 @@ var $ = jQuery.noConflict();
 $(document).ready(function(){
 	
 
-
-     
-           if('crm_2021' == drupalSettings.ajaxPageState.theme){
+          if('crm_2021' == drupalSettings.ajaxPageState.theme){
           //display map
           var map = L.map('map').setView([7.6949,25.8627], 5);
           //https://api.mapbox.com/styles/v1/iompreacher/ciy3q3lqy00012rpboavecojw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaW9tcHJlYWNoZXIiLCJhIjoiY2l5M3Eya3luMDAwZjJ3cDEwZXcyODE1cCJ9.RH31fiArda27HIIqy2NWuQ
@@ -15,24 +13,27 @@ $(document).ready(function(){
           }).addTo(map);
 
           var rows = drupalSettings.crm_awareness.rows;
+   
 
           for(var i=0; i < rows.length; i++){
             var result = rows[i];
-            var mapItem = new MapItem(result);
 
-            if(mapItem.getCoordinates()) {
+            //var mapItem = new MapItem(result);
+          
+
+            if(result.Coordinates) {
               //alert(mapItem.print());
               var icon = L.divIcon({
-                html: '<div class="mapItem" data-size="' + mapItem.getCount()  + '"><span>' + mapItem.getCount() + '</span></div>',
+                html: '<div class="mapItem" data-size="' + result.Count  + '"><span>' + result.Count + '</span></div>',
                 iconSize: new L.Point(40, 40)
               });
 
-              var marker = L.marker(mapItem.getCoordinates(), {'icon': icon});
+              var marker = L.marker(result.Coordinates, {'icon': icon});
               marker.addTo(map);
 
-              var mapItemOrig = getOrigMapItem(mapItem, drupalSettings.crm_awareness.orows);
-              var popupStr = "<div id='" + mapItem.getCampId() +"'>See all <a href='" + drupalSettings.crm_awareness.location + mapItem.getCampId() +
-                  "'>" + mapItemOrig.getCount() + " case(s)</a> in " + mapItem.getCampName() + "</div>"
+              //var mapItemOrig = getOrigMapItem(mapItem, drupalSettings.crm_awareness.orows);
+              var popupStr = "<div id='" + result.CampId +"'>See all <a href='" + drupalSettings.crm_awareness.location + result.CampId +
+                  "'>" + result.Count + " case(s)</a> in " + result.CampName + "</div>"
               var popup = L.popup().setContent(popupStr);
               marker.bindPopup(popup);
             }
@@ -88,7 +89,7 @@ $(document).ready(function(){
      // $('#publication-search-map').vectorMap(options);
 
   });
-
+/*
 function getOrigMapItem(mapItem, orows){
   for(var i=0; i < orows.length; i++){
     if(orows[i].taxonomy_term_data_field_data_field_camp_of_survivor_tid == mapItem.getCampId()){
@@ -97,6 +98,7 @@ function getOrigMapItem(mapItem, orows){
   }
   return false;
 }
+*/
 
 function MapDisplay(size){
   this.size = size;
@@ -127,7 +129,7 @@ function MapDisplay(size){
 
 
 }
-
+/*
 function MapItem(record){
   this.record = record;
   var that = this;
@@ -175,7 +177,7 @@ function MapItem(record){
   }
 }
 	
-
+*/
 
 
 (function ($, Drupal,drupalSettings) {
