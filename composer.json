@@ -52,7 +52,8 @@
         "drupal/twitter_block": "^3.0@alpha",
         "drupal/views_bootstrap": "^4.3",
         "drupal/webform": "^6.0",
-        "drush/drush": "^10.4"
+        "drush/drush": "^10.4",
+        "kint-php/kint": "^3.3"
     },
     "conflict": {
         "drupal/drupal": "*"
