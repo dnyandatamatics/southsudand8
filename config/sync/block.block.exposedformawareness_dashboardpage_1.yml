@@ -1,0 +1,29 @@
+uuid: 77cbd7a2-1f14-4b32-b98c-3109c6a73c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.awareness_dashboard
+  module:
+    - system
+    - views
+  theme:
+    - crm_2021
+id: exposedformawareness_dashboardpage_1
+theme: crm_2021
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:awareness_dashboard-page_1'
+settings:
+  id: 'views_exposed_filter_block:awareness_dashboard-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /awareness-dashboard
+    negate: false
+    context_mapping: {  }

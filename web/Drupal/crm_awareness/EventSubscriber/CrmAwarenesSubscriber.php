@@ -2,32 +2,21 @@
 
 namespace Drupal\crm_awareness\EventSubscriber;
 
-use Drupal\crm_awareness\CrmAwarenesServiceInterface;
-use Drupal\crm_awareness\Event\ViewTableAwarenessDashboardPreprocessEvent;
 use Drupal\hook_event_dispatcher\HookEventDispatcherInterface;
-use Drupal\views\Views;
 use Drupal\views_event_dispatcher\Event\Views\ViewsPostExecuteEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\Event;
-
-
 
 
 /**
  * Class CrmAwarenesSubscriber.
  */
 class CrmAwarenesSubscriber implements EventSubscriberInterface {
-   /**
-    * 
-    * @var \Drupal\crm_awareness\CrmAwarenesService
-    */ 
-   protected $crm_helper; 
 
   /**
    * Constructs a new CrmAwarenesSubscriber object.
    */
-   public function __construct(CrmAwarenesServiceInterface $awarness_service){
-       $this->crm_helper = $awarness_service;
+  public function __construct() {
 
   }
 
@@ -35,9 +24,7 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    $events = [];  
     $events[HookEventDispatcherInterface::VIEWS_POST_EXECUTE][] = ['postExecuteAwarenesView'];
-    $events[ViewTableAwarenessDashboardPreprocessEvent::name()][] = ['preprocessViewViewTable'];
     $events['kernel.request'][] = ['kernelRequest'];
 
     return $events;
@@ -50,62 +37,7 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
    *   The dispatched event.
    */
   public function kernelRequest(Event $event) {
-   // \Drupal::messenger()->addMessage('Event kernel.request thrown by Subscriber in module crm_awareness.', 'status', TRUE);
-  }
-  
-  /**
-   * 
-   * @param ViewTableAwarenessDashboardPreprocessEvent $event
-   */
-  function preprocessViewViewTable(ViewTableAwarenessDashboardPreprocessEvent $event){
-      $variables = $event->getVariables();
-     
-      
-      $hook = $event->getHook();
-     
-      
-      /**
-       * 
-       * @var \Drupal\views\ViewExecutable $view
-       */
-      $view = $event->getVariables()->get('view');
-     // kint($variables);
-     // exit;
-      
-      
-      if ($view->id() == 'awareness_dashboard' && $view->current_display == 'page_1') {
-          
-          
-          $result_sex = $view->result;
-          $variables->set('myname','dnyaneshwar');
-          
-          //get views from total
-          
-          // view michine name user_quick_view
-          $view = Views::getView('awareness_dashboard');
-          $view->setDisplay('attachment_2');
-          $view->execute();
-          $result_total = $view->result[0]->node_field_data_title;
-          
-          //get views from age group
-          $view = Views::getView('awareness_dashboard');
-          $view->setDisplay('attachment_1');
-          $view->execute();
-          $result_age = $view->result;
-          
-          
-          $vars['result_crm']['sex'] = $this->crm_helper->_crm_awareness_transform_sex_result($result_sex, $result_total);
-          $vars['result_crm']['age'] = $this->crm_helper->_crm_awareness_transform_age_result($result_age, $result_total);
-          $vars['result_crm']['total'] = $result_total;
-
-          $variables->set('result_crm',$vars['result_crm']);
-         
-   
-      }
-      
-      
-    
-     
+    \Drupal::messenger()->addMessage('Event kernel.request thrown by Subscriber in module crm_awareness.', 'status', TRUE);
   }
   
   /**
@@ -114,7 +46,7 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
    * @param \Drupal\views_event_dispatcher\Event\Views\ViewsPostExecuteEvent $event
    *   The event.
    */
-  public function postExecuteAwarenesView(ViewsPostExecuteEvent $event): void { 
+  public function postExecuteAwarenesView(ViewsPostExecuteEvent $event): void {
       
       /**
        *

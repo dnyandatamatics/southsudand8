@@ -1,7 +1,7 @@
 services:
   crm_awareness.default:
     class: Drupal\crm_awareness\EventSubscriber\CrmAwarenesSubscriber
-    arguments: []
+    arguments: ['@crm_awareness.helper']
     tags:
       - { name: event_subscriber }
   logger.channel.crm_awareness:
@@ -10,3 +10,7 @@ services:
   crm_awareness.helper:
     class: Drupal\crm_awareness\CrmAwarenesService
     arguments: ['@entity_type.manager', '@database']
+  preprocess_event.factory.crm_awareness:
+    class: Drupal\crm_awareness\Factory\ViewTableAwarenessDashboardPreprocessEventFactory
+    tags:
+      -  { name: preprocess_event_factory }
