@@ -11,3 +11,4 @@ dependencies:
   - node
   - taxonomy
   - user
+  - image
