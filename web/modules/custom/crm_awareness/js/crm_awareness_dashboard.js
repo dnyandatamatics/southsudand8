@@ -3,14 +3,16 @@ var $ = jQuery.noConflict();
 
 $(document).ready(function(){
 	
-	   $("body.page-awareness-dashboard .views-exposed-form .views-exposed-widgets .views-exposed-widget > label").click(function() {
+	   $("body .bef-exposed-form .form-row  fieldset legend > span").click(function() { 
+
                         $(this).next().toggle(300);
+                        
                         var bgImg = $(this).css('background-image');
-                        if(bgImg.indexOf('icon-close.png') != -1 ){
-                            $(this).css('background-image', 'url("/sites/all/themes/crm/images/icon-expand.png")');
-                        }else{
-                            $(this).css('background-image', 'url("/sites/all/themes/crm/images/icon-close.png")');
-                        }
+                       // if(bgImg.indexOf('icon-close.png') != -1 ){
+                            $(this).css('background-image', 'url("/themes/custom/crm_2021/images/icon-expand.png")');
+                       // }else{
+                            $(this).css('background-image', 'url("/themes/custom/crm_2021/images/icon-close.png")');
+                       // }
                     });
 
                     Highcharts.chart('container-compre-meaning', {
