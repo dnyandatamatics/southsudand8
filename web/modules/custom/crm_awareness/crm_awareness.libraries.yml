@@ -2,3 +2,8 @@ crmawarenes-styling:
   version: VERSION
   js:
     js/crm_awareness.js: {}
+
+crmawarenes-dashboard:
+  version: VERSION
+  js:
+    js/crm_awareness_dashboard.js: {}

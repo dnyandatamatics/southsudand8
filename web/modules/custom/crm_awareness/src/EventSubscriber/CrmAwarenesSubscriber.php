@@ -59,11 +59,8 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
    */
   function preprocessViewViewTable(ViewTableAwarenessDashboardPreprocessEvent $event){
       $variables = $event->getVariables();
+      //$hook = $event->getHook();
      
-      
-      $hook = $event->getHook();
-     
-      
       /**
        * 
        * @var \Drupal\views\ViewExecutable $view
@@ -75,9 +72,9 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
       
       if ($view->id() == 'awareness_dashboard' && $view->current_display == 'page_1') {
           
-          
+          $vars = [];
           $result_sex = $view->result;
-          $variables->set('myname','dnyaneshwar');
+          //$variables->set('myname','dnyaneshwar');
           
           //get views from total
           
@@ -93,13 +90,75 @@ class CrmAwarenesSubscriber implements EventSubscriberInterface {
           $view->execute();
           $result_age = $view->result;
           
+          //get views compre meaning of SEA
+          $view = Views::getView('awareness_dashboard');
+          $view->setDisplay('attachment_3');
+          $view->execute();
+          $result_compre_meaning = $view->result;
+          
+          //get views compre risk
+          $view = Views::getView('awareness_dashboard');
+          $view->setDisplay('attachment_4');
+          $view->execute();
+          $result_compre_risk = $view->result;
+          
+          //get views compre refugee
+          $view = Views::getView('awareness_dashboard');
+          $view->setDisplay('attachment_5');
+          $view->execute();
+          $result_compre_refugee = $view->result;
+          
+          //get views compre complaint
+          $view = Views::getView('awareness_dashboard');
+          $view->setDisplay('attachment_6');
+          $view->execute();
+          $result_compre_complaint = $view->result;
+          
+          //get views issues per camp
+          $view = Views::getView('awareness_dashboard');
+          $view->setDisplay('attachment_7');
+          $view->execute();
+          $result_issues_camp = $view->result;
+          
+          //get views issues per camp
+          $view = Views::getView('awareness_dashboard');
+          $view->setDisplay('attachment_8');
+          $view->execute();
+          $result_sector = $view->result;
+         
+          //get a list
+          $compre = $this->crm_helper->_crm_awareness_get_comprehension();
+          $camps = $this->crm_helper->_crm_complaints_get_camps();
+          $sector = $this->crm_helper->_crm_awareness_get_sector();
+    
           
           $vars['result_crm']['sex'] = $this->crm_helper->_crm_awareness_transform_sex_result($result_sex, $result_total);
           $vars['result_crm']['age'] = $this->crm_helper->_crm_awareness_transform_age_result($result_age, $result_total);
           $vars['result_crm']['total'] = $result_total;
-
+          $vars['result_crm']['compre_meaning'] = $this->crm_helper->_crm_awareness_transform_compre_meaning($result_compre_meaning, $compre);
+          $vars['result_crm']['compre_risk'] = $this->crm_helper->_crm_awareness_transform_compre_risk($result_compre_risk, $compre);
+          $vars['result_crm']['compre_refugee'] = $this->crm_helper->_crm_awareness_transform_compre_refugee($result_compre_refugee, $compre);
+          $vars['result_crm']['compre_complaint'] = $this->crm_helper->_crm_awareness_transform_compre_complaint($result_compre_complaint, $compre);
+          $vars['result_crm']['issues_camp'] = $this->crm_helper->_crm_awareness_transform_issues_per_camp($result_issues_camp, $camps);
+          $vars['result_crm']['issues_sector'] = $this->crm_helper->_crm_awareness_transform_sector($result_sector, $sector);
+          //kint($vars['result_crm']);exit;
           $variables->set('result_crm',$vars['result_crm']);
-         
+          
+          $view = $event->getVariables()->get('view');
+          $view->element['#attached']['library'][] = 'crm_2021/highcharts-lib';
+          $view->element['#attached']['library'][] = 'crm_awareness/crmawarenes-dashboard';
+          
+          $view->element['#attached']['drupalSettings']['crm_awareness_dashboard'] = [
+           
+                  'rows_compre_meaning' => $vars['result_crm']['compre_meaning'],
+                  'rows_compre_risk' => $vars['result_crm']['compre_risk'],
+                  'rows_compre_refugee' => $vars['result_crm']['compre_refugee'],
+                  'rows_compre_complaint' => $vars['result_crm']['compre_complaint'],
+                  'rows_issues_camp' => $vars['result_crm']['issues_camp'],
+                  'rows_issues_sector' => $vars['result_crm']['issues_sector'],
+            
+          ];
+          
    
       }
       
