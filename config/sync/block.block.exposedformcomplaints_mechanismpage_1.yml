@@ -1,0 +1,29 @@
+uuid: 9b6e504c-5295-4d3a-9103-7b59bc9be45f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.complaints_mechanism
+  module:
+    - system
+    - views
+  theme:
+    - crm_2021
+id: exposedformcomplaints_mechanismpage_1
+theme: crm_2021
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:complaints_mechanism-page_1'
+settings:
+  id: 'views_exposed_filter_block:complaints_mechanism-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /complaints-mechanism
+    negate: false
+    context_mapping: {  }

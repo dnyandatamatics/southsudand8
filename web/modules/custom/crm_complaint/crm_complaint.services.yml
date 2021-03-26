@@ -1,0 +1,12 @@
+services:
+  crm_complaint.default:
+    class: Drupal\crm_complaint\EventSubscriber\CrmComplaintSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+  logger.channel.crm_complaint:
+    parent: logger.channel_base
+    arguments: ['crm_complaint']
+  crm_complaint.helper:
+    class: Drupal\crm_complaint\CrmAwarenesService
+    arguments: ['@entity_type.manager', '@database']
