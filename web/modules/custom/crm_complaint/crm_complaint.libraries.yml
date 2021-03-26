@@ -1,0 +1,5 @@
+crmcomplaint-styling:
+  version: VERSION
+  js:
+    js/crm_complaint.js: {}
+

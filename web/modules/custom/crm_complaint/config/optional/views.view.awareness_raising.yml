@@ -1,32 +1,30 @@
-uuid: 423603d2-200e-47b8-abba-5be1019cf996
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date_and_time_of_incident
-    - field.storage.node.field_date_complaint_received
-    - field.storage.node.field_location_of_incident
-    - field.storage.node.field_reporting_method
-    - field.storage.node.field_status_of_case
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_assessment_method
+    - field.storage.node.field_beneficiary
+    - field.storage.node.field_beneficiary_agency
+    - field.storage.node.field_camp_of_survivor
+    - field.storage.node.field_date_recorded
+    - field.storage.node.field_sex
     - field.storage.taxonomy_term.field_lat
     - field.storage.taxonomy_term.field_long
-    - node.type.issue
+    - node.type.awareness
     - system.menu.main
+    - taxonomy.vocabulary.agency
+    - taxonomy.vocabulary.assessment_method
+    - taxonomy.vocabulary.beneficiary
     - taxonomy.vocabulary.camp
-    - taxonomy.vocabulary.case_status
-    - taxonomy.vocabulary.reporting_method
-    - taxonomy.vocabulary.type_of_report
-    - taxonomy.vocabulary.yes_no
-    - user.role.administrator
-    - user.role.complaints_staff
-    - user.role.national_coordinator
+    - taxonomy.vocabulary.sex
   module:
     - datetime
     - node
     - taxonomy
     - user
-id: complaints_mechanism
-label: 'Complaints Mechanism'
+id: awareness_raising
+label: 'Awareness Raising'
 module: views
 description: ''
 tag: ''
@@ -40,12 +38,9 @@ display:
     position: 0
     display_options:
       access:
-        type: role
+        type: perm
         options:
-          role:
-            complaints_staff: complaints_staff
-            administrator: administrator
-            national_coordinator: national_coordinator
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -61,7 +56,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -98,64 +93,8 @@ display:
           description: ''
           columns:
             title: title
-            nid: nid
-            field_date_complaint_received: field_date_complaint_received
-            field_date_and_time_of_incident: field_date_and_time_of_incident
-            field_location_of_incident: field_location_of_incident
-            field_reporting_method: field_reporting_method
-            field_status_of_case: field_status_of_case
-            nothing: nothing
           info:
             title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            nid:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_date_complaint_received:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_date_and_time_of_incident:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_location_of_incident:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_reporting_method:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_status_of_case:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            nothing:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -165,17 +104,19 @@ display:
           default: '-1'
           empty_table: false
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          view_mode: teaser
       fields:
         title:
           id: title
           table: node_field_data
           field: title
           relationship: none
-          group_type: count
+          group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -207,7 +148,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -232,14 +173,14 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
+        field_date_recorded:
+          id: field_date_recorded
+          table: node__field_date_recorded
+          field: field_date_recorded
           relationship: none
           group_type: group
           admin_label: ''
-          label: NID
+          label: 'Date Awareness Measured'
           exclude: false
           alter:
             alter_text: false
@@ -272,7 +213,386 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: print_date
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_sex:
+          id: field_sex
+          table: node__field_sex
+          field: field_sex
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Gender
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_beneficiary:
+          id: field_beneficiary
+          table: node__field_beneficiary
+          field: field_beneficiary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Beneficiary
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_assessment_method:
+          id: field_assessment_method
+          table: node__field_assessment_method
+          field: field_assessment_method
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Assessment Method'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_camp_of_survivor:
+          id: field_camp_of_survivor
+          table: node__field_camp_of_survivor
+          field: field_camp_of_survivor
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Camp
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_beneficiary_agency:
+          id: field_beneficiary_agency
+          table: node__field_beneficiary_agency
+          field: field_beneficiary_agency
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Agency
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ID
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -298,74 +618,10 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: field
-        field_date_complaint_received:
-          id: field_date_complaint_received
-          table: node__field_date_complaint_received
-          field: field_date_complaint_received
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Date Recorded'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: print_date
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_date_and_time_of_incident:
-          id: field_date_and_time_of_incident
-          table: node__field_date_and_time_of_incident
-          field: field_date_and_time_of_incident
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
           relationship: none
           group_type: group
           admin_label: ''
@@ -410,211 +666,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: short
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_location_of_incident:
-          id: field_location_of_incident
-          table: node__field_location_of_incident
-          field: field_location_of_incident
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Incident Location'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_reporting_method:
-          id: field_reporting_method
-          table: node__field_reporting_method
-          field: field_reporting_method
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Reporting Method'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_status_of_case:
-          id: field_status_of_case
-          table: node__field_status_of_case
-          field: field_status_of_case
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Status of Case'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          text: edit
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link_edit
         nothing:
           id: nothing
           table: views
@@ -622,11 +678,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Details
+          label: ''
           exclude: false
           alter:
             alter_text: true
-            text: ''
+            text: '<img src="/themes/custom/crm_2021/images/goarrow.png">'
             make_link: false
             path: ''
             absolute: false
@@ -655,7 +711,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -683,7 +739,7 @@ display:
           table: node_field_data
           field: type
           value:
-            issue: issue
+            awareness: awareness
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -691,10 +747,10 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_status_of_case_target_id:
-          id: field_status_of_case_target_id
-          table: node__field_status_of_case
-          field: field_status_of_case_target_id
+        field_beneficiary_target_id:
+          id: field_beneficiary_target_id
+          table: node__field_beneficiary
+          field: field_beneficiary_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -703,14 +759,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_status_of_case_target_id_op
-            label: 'Status of Case (field_status_of_case)'
+            operator_id: field_beneficiary_target_id_op
+            label: 'Target Audience'
             description: ''
             use_operator: false
-            operator: field_status_of_case_target_id_op
+            operator: field_beneficiary_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_status_of_case_target_id
+            identifier: field_beneficiary_target_id
             required: false
             remember: false
             multiple: false
@@ -736,9 +792,9 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
-          vid: case_status
+          vid: beneficiary
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -759,7 +815,7 @@ display:
           exposed: true
           expose:
             operator_id: field_date_recorded_value_op
-            label: 'Date Awareness Measured (field_date_recorded)'
+            label: 'Date Awareness Measured'
             description: ''
             use_operator: false
             operator: field_date_recorded_value_op
@@ -793,10 +849,10 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
-        field_reporting_method_target_id:
-          id: field_reporting_method_target_id
-          table: node__field_reporting_method
-          field: field_reporting_method_target_id
+        field_camp_of_survivor_target_id:
+          id: field_camp_of_survivor_target_id
+          table: node__field_camp_of_survivor
+          field: field_camp_of_survivor_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -805,14 +861,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_reporting_method_target_id_op
-            label: 'Reporting Method (field_reporting_method)'
+            operator_id: field_camp_of_survivor_target_id_op
+            label: SITE
             description: ''
             use_operator: false
-            operator: field_reporting_method_target_id_op
+            operator: field_camp_of_survivor_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_reporting_method_target_id
+            identifier: field_camp_of_survivor_target_id
             required: false
             remember: false
             multiple: false
@@ -838,162 +894,16 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: reporting_method
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_location_of_incident_target_id:
-          id: field_location_of_incident_target_id
-          table: node__field_location_of_incident
-          field: field_location_of_incident_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_location_of_incident_target_id_op
-            label: 'Location of Incident (field_location_of_incident)'
-            description: ''
-            use_operator: false
-            operator: field_location_of_incident_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_location_of_incident_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              awareness_staff: '0'
-              complaints_staff: '0'
-              administrator: '0'
-              focal_point: '0'
-              national_coordinator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
           vid: camp
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_name_of_survivor_value:
-          id: field_name_of_survivor_value
-          table: node__field_name_of_survivor
-          field: field_name_of_survivor_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_name_of_survivor_value_op
-            label: 'Name of Survivor (field_name_of_survivor)'
-            description: ''
-            use_operator: false
-            operator: field_name_of_survivor_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_name_of_survivor_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              awareness_staff: '0'
-              complaints_staff: '0'
-              administrator: '0'
-              focal_point: '0'
-              national_coordinator: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
-        field_case_number_value:
-          id: field_case_number_value
-          table: node__field_case_number
-          field: field_case_number_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_case_number_value_op
-            label: 'Case Number (field_case_number)'
-            description: ''
-            use_operator: false
-            operator: field_case_number_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_case_number_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              awareness_staff: '0'
-              complaints_staff: '0'
-              administrator: '0'
-              focal_point: '0'
-              national_coordinator: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: numeric
-        field_complaint_referred_target_id:
-          id: field_complaint_referred_target_id
-          table: node__field_complaint_referred
-          field: field_complaint_referred_target_id
+        field_assessment_method_target_id:
+          id: field_assessment_method_target_id
+          table: node__field_assessment_method
+          field: field_assessment_method_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -1002,14 +912,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_complaint_referred_target_id_op
-            label: 'This complaint has been referred (field_complaint_referred)'
+            operator_id: field_assessment_method_target_id_op
+            label: 'Assessment Method'
             description: ''
             use_operator: false
-            operator: field_complaint_referred_target_id_op
+            operator: field_assessment_method_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_complaint_referred_target_id
+            identifier: field_assessment_method_target_id
             required: false
             remember: false
             multiple: false
@@ -1035,16 +945,16 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
-          vid: yes_no
+          vid: assessment_method
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_type_of_report_target_id:
-          id: field_type_of_report_target_id
-          table: node__field_type_of_report
-          field: field_type_of_report_target_id
+        field_beneficiary_agency_target_id:
+          id: field_beneficiary_agency_target_id
+          table: node__field_beneficiary_agency
+          field: field_beneficiary_agency_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -1053,14 +963,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_type_of_report_target_id_op
-            label: 'Type of Report (field_type_of_report)'
+            operator_id: field_beneficiary_agency_target_id_op
+            label: 'Beneficiary''s Agency'
             description: ''
             use_operator: false
-            operator: field_type_of_report_target_id_op
+            operator: field_beneficiary_agency_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_type_of_report_target_id
+            identifier: field_beneficiary_agency_target_id
             required: false
             remember: false
             multiple: false
@@ -1086,27 +996,80 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
-          vid: type_of_report
+          vid: agency
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_sex_target_id:
+          id: field_sex_target_id
+          table: node__field_sex
+          field: field_sex_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_sex_target_id_op
+            label: Sex
+            description: ''
+            use_operator: false
+            operator: field_sex_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_sex_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              awareness_staff: '0'
+              complaints_staff: '0'
+              administrator: '0'
+              focal_point: '0'
+              national_coordinator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: sex
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts:
-        field_date_recorded_value:
-          id: field_date_recorded_value
-          table: node__field_date_recorded
-          field: field_date_recorded_value
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
           exposed: false
           expose:
             label: ''
           granularity: second
-          plugin_id: datetime
-      title: '<none>'
+      title: 'Awareness Raising'
       header: {  }
       footer: {  }
       empty: {  }
@@ -1117,7 +1080,6 @@ display:
         operator: AND
         groups:
           1: AND
-      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1127,13 +1089,14 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags:
-        - 'config:field.storage.node.field_date_and_time_of_incident'
-        - 'config:field.storage.node.field_date_complaint_received'
-        - 'config:field.storage.node.field_location_of_incident'
-        - 'config:field.storage.node.field_reporting_method'
-        - 'config:field.storage.node.field_status_of_case'
+        - 'config:field.storage.node.field_assessment_method'
+        - 'config:field.storage.node.field_beneficiary'
+        - 'config:field.storage.node.field_beneficiary_agency'
+        - 'config:field.storage.node.field_camp_of_survivor'
+        - 'config:field.storage.node.field_date_recorded'
+        - 'config:field.storage.node.field_sex'
   attachment_1:
     display_plugin: attachment
     id: attachment_1
@@ -1142,13 +1105,13 @@ display:
     display_options:
       display_extenders: {  }
       relationships:
-        field_location_of_incident:
-          id: field_location_of_incident
-          table: node__field_location_of_incident
-          field: field_location_of_incident
+        field_camp_of_survivor:
+          id: field_camp_of_survivor
+          table: node__field_camp_of_survivor
+          field: field_camp_of_survivor
           relationship: none
           group_type: group
-          admin_label: 'field_location_of_incident: Taxonomy term'
+          admin_label: 'field_camp_of_survivor: Taxonomy term'
           required: false
           plugin_id: standard
       defaults:
@@ -1160,10 +1123,10 @@ display:
           table: node_field_data
           field: title
           relationship: none
-          group_type: count
+          group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1195,7 +1158,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1220,80 +1183,14 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: NID
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         name:
           id: name
           table: taxonomy_term_field_data
           field: name
-          relationship: field_location_of_incident
+          relationship: field_camp_of_survivor
           group_type: group
           admin_label: ''
-          label: 'Location Incident'
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -1352,11 +1249,141 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
+        field_date_recorded:
+          id: field_date_recorded
+          table: node__field_date_recorded
+          field: field_date_recorded
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Date Awareness Measured'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: print_date
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: field_camp_of_survivor
+          group_type: group
+          admin_label: ''
+          label: 'Term ID'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: field
         field_long:
           id: field_long
           table: taxonomy_term__field_long
           field: field_long
-          relationship: field_location_of_incident
+          relationship: field_camp_of_survivor
           group_type: group
           admin_label: ''
           label: Long
@@ -1419,7 +1446,7 @@ display:
           id: field_lat
           table: taxonomy_term__field_lat
           field: field_lat
-          relationship: field_location_of_incident
+          relationship: field_camp_of_survivor
           group_type: group
           admin_label: ''
           label: Lat
@@ -1478,9 +1505,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-      inherit_exposed_filters: true
       displays:
         page_1: page_1
+      inherit_exposed_filters: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1489,8 +1516,9 @@ display:
         - url
         - user
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags:
+        - 'config:field.storage.node.field_date_recorded'
         - 'config:field.storage.taxonomy_term.field_lat'
         - 'config:field.storage.taxonomy_term.field_long'
   page_1:
@@ -1500,17 +1528,17 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: complaints-mechanism
+      path: awareness-raising
+      exposed_block: true
       menu:
         type: normal
-        title: 'Complaints Mechanism'
+        title: 'Awareness Raising'
         description: ''
         expanded: false
-        parent: 'menu_link_content:dcfdde90-2f9f-4f92-802e-a2563bbcbacf'
+        parent: 'menu_link_content:93084bd8-526c-4cf3-b2aa-141493c17949'
         weight: -50
         context: '0'
         menu_name: main
-      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1520,10 +1548,11 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags:
-        - 'config:field.storage.node.field_date_and_time_of_incident'
-        - 'config:field.storage.node.field_date_complaint_received'
-        - 'config:field.storage.node.field_location_of_incident'
-        - 'config:field.storage.node.field_reporting_method'
-        - 'config:field.storage.node.field_status_of_case'
+        - 'config:field.storage.node.field_assessment_method'
+        - 'config:field.storage.node.field_beneficiary'
+        - 'config:field.storage.node.field_beneficiary_agency'
+        - 'config:field.storage.node.field_camp_of_survivor'
+        - 'config:field.storage.node.field_date_recorded'
+        - 'config:field.storage.node.field_sex'
