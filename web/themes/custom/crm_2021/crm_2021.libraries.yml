@@ -21,6 +21,11 @@ leaflet-markercluster:
       leaflet_markercluster/dist/MarkerCluster.css: {}
       leaflet_markercluster/dist/MarkerCluster.Default.css: {}
 
+highcharts-lib:
+  version: VERSION
+  js:
+    highcharts/code/highcharts.js: {}
+
 bootstrap_cdn:
   js:
     //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}

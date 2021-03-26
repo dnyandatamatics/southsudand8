@@ -350,7 +350,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: medium
+            format_type: print_date
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1478,6 +1478,7 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      inherit_exposed_filters: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1503,8 +1504,8 @@ display:
         title: 'Complaints Mechanism'
         description: ''
         expanded: false
-        parent: ''
-        weight: 0
+        parent: 'menu_link_content:dcfdde90-2f9f-4f92-802e-a2563bbcbacf'
+        weight: -50
         context: '0'
         menu_name: main
       exposed_block: true

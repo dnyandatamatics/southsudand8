@@ -176,8 +176,17 @@
        {{ page.sidebar_first }}
       </aside>  <!-- /#sidebar-first -->
    {% endif %}
+   
+     {%
+        set content_classes = [
+          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+        ]
+      %}
 
-    <section class="section contextual-links-region" > {#<?php print $content_column_class; ?>#}
+    <section {{ content_attributes.addClass(content_classes) }}> {#<?php print $content_column_class; ?>#}
         
       <a id="main-content"></a>
       {#<?php print render($title_prefix); ?>#}
