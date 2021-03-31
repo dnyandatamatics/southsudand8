@@ -8939,6 +8939,8 @@ button.close {
 #navbar .nav > li > a, #navbar .nav > li > .nolink {
   text-transform: uppercase;
   font-size: 18px;
+  color: #000;
+  padding: 5px 10px;
 }
 /* line 33, ../sass/misc/_navigation.scss */
 #navbar .navbar-nav {
@@ -8958,9 +8960,20 @@ button.close {
   float: left;
 }
 /* line 42, ../sass/misc/_navigation.scss */
-#navbar .navbar-nav li:hover {
-  background: #7eb0dd;
+#navbar .navbar-nav li:hover, ul.sf-menu li:hover, .nav > li > a:hover, .nav > li > a:focus, ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
+  background: #7eb0dd; color: #fff;
 }
+ul.sf-menu a, ul.sf-menu span.nolink{padding: 0.5em 1.5em; color: #000}
+.sf-depth-2{color: #000;}
+ul.sf-menu li:hover, ul.sf-menu a:hover, a.sf-depth-2:hover, #navbar .nav > li > a:hover, #navbar .nav > li > .nolink:hover {
+    color: #fff !important;
+}
+ul.sf-menu li:hover > ul, ul.sf-menu li.sfHover > ul {
+    left: 0;
+    top: 2.1em;
+}
+ul.sf-menu.sf-horizontal.sf-shadow ul, ul.sf-menu.sf-vertical.sf-shadow ul, ul.sf-menu.sf-navbar.sf-shadow ul ul{box-shadow: none;}
+ul.sf-menu .sf-sub-indicator{display: none;}
 /* line 47, ../sass/misc/_navigation.scss */
 #navbar .navbar-nav .menuparent ul {
   background: #7eb0dd;
@@ -11134,4 +11147,35 @@ body {
 }
 #container-type {
   display: none;
+}
+
+
+ul.sf-menu .sf-sub-indicator{right: 0}
+.alert-wrapper{position: relative;}
+.alert-wrapper .alert{opacity: 1;}
+.page-view-awareness-raising tr th {
+    background-color: #7eb0dd;
+    color: #fff;
+    text-align: center;
+    border-right: 1px solid #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.view-awareness-raising tr td{border: 1px solid #DDD}
+.view-awareness-raising tr td time.datetime{
+    word-break: break-all;
+    white-space: pre-wrap;
+    width: 80px;
+    display: block;
+    font-size: 22px;
+    padding: 0 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.view-awareness-raising tr td a{color: #333}
+#navbar .navbar-nav a, #navbar .navbar-nav span.nolink, #navbar .navbar-nav span {
+    padding: 5px 10px;
+    color: #000;
 }
